@@ -56,7 +56,7 @@ List of features:
 * m) Loooow priority - randomly assigned tile positions.
 * noteverngonnarankit) Dream big feature (like really big): gamify the checkerboard somehow (like a 'chessmode' switch).
 
-![Image of time/priority matrix](img/Screenshot 2021-07-11 at 01.20.34.png)
+![Image of time/priority matrix](./img/time_priority_matrix.png)
 
 
 ### MVP/PostMVP - 5min
