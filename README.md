@@ -19,11 +19,12 @@ You are **responsible** for scheduling time with your squad to seek approval for
 ## Project Description
 I have two main concepts that I'd like to integrate, though I'm concerned #2 may be too big of a bite at this time in my studies:
 	1) I would like my portfolio landing page to be a a dynamic onesheet, using links, transitions, and maybe an <iframe> or two in place of scrolling
-	2) I want to try to implement non-rectangular or even trapezoidal design using some combination of transform:skew/rotate and clip-path. Doing this in conjunction with reactive design as well as grid and flexbox will be... a challange. 
+	~~2) I want to try to implement non-rectangular or even trapezoidal design using some combination of transform:skew/rotate and clip-path. Doing this in conjunction with reactive design as well as grid and flexbox will be... a challange.~~
+	2b) After a lot of concept research time, we're gonna stick with a (probably) parallelogram design. Short term goal: 'randomly' destributed tiles on a grid. Long term: actually randomise the tile positions with each reaload. Checkerboard kinda idea.
 
 
 ## Portfolio I want to Emulate
-Search and compare at least 3 profile web sites.  Record your findings in the table below and include some aspect of the site that you would like to incorporate into your own site.
+
 Link To Site  | One Thing I'd Like To Incorporate | 
 | ------------- | ------------- |
 | [https://www.marcomarino.design/project.html](https://www.marcomarino.design/project.html) | onesheet without scrolling. minimalist |
@@ -35,14 +36,28 @@ Link To Site  | One Thing I'd Like To Incorporate |
 
 ## Wireframes
 
-
+#### Gotta make them darn wireframes.
 
 ## Time/Priority Matrix 
-[Link](https://res.cloudinary.com/jkeohan/image/upload/a_270/v1591621734/project1_matrix_ocy5gc_h1kg0m.jpg)
-Include a full list of features that have been prioritized based on the `Time and Priority` Matix.  This involves drawing a a square.  In the middle of the square, on the x axis draw a line.  The most left part of the line should start with 0hrs and the end of the line should include 2hrs.  This line will be used to estimate how much time any one feature will take to complete. 
-Now draw a vertical line on the y axis.  The top of this line should have `High` and the bottom `Low`.  This line will be used to assign a priority to to each feature you wish to include in the project.  
-Now create a separate list starting with A and assign it one of the features.  Continue to assign each feature a letter.  Once complete add each letter to the matrix assigning based on what your feel it's prioirty is an how long it will take to implement. If any one feature takes longer than 2hrs to complete than break it down into smaller tasks and reassign them a new letter. 
-Once complete tally up the time and determine how long the project will take to complete. Now break those features into MVP and PostMVP so you can guarantee you will have a fully functioning project to demo. 
+List of features:
+* a) Checkerboard grid (mobile first)
+  - b) Reactive: Phone size 3x6 squares. Larger viewports = more squares.
+* c) Hamburger for mobile, which will populate navbar to grid squares.
+* d) functional nav links
+  - about me, contact form, linkedin, resume
+* e) "nav" for larger format will be links dispersed on the checkerboard
+* f) project placeholders/previews (snapshots first)
+  - g) long term <iframe> based tiles that transition to fill the screen.
+* h) Generate API (placeholder first... need projects!)
+* i) Initial logo ('blankSpace')
+  - j) display on white sheet then transition effect to checkerboard
+* k) hover effects over each tile.
+* l) Transition effects for clicking tiles.
+* m) Loooow priority - randomly assigned tile positions.
+* noteverngonnarankit) Dream big feature (like really big): gamify the checkerboard somehow (like a 'chessmode' switch).
+
+![Image of time/priority matrix]
+(./img/Screenshot 2021-07-11 at 01.20.34.png)
 
 
 ### MVP/PostMVP - 5min
