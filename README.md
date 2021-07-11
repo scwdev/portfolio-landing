@@ -34,12 +34,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
 ---
 
 ## Wireframes
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Do not include the actual image and have it render on the page.  
-- [Mobile](https://i.imgur.com/P3iBEZf.jpg)
-- [Desktop](https://i.imgur.com/xpOWo0E.jpg)
-Wireframing Resources:
-- [Mockflow](https://mockflow.com/app/#Wireframe)
-- [Figma](https://www.figma.com/)
+
 
 
 ## Time/Priority Matrix 
