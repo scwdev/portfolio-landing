@@ -3,7 +3,7 @@
 }
 
 * {
-    border: 1px solid #000;
+    transition-duration: .5s;
 }
 
 body {
@@ -30,12 +30,10 @@ main .tiles {
 
 #nav-button {
     grid-area: 6 / 3 / 7 / 4;
+    font-size: calc(0.5*(var(--tile)));
+    color: gray;
 }
 
-.fas {
-    transform: scale(4);
-    color: darkgray;
-}
 
 #proj-1 {
     grid-area: 1 / 1 / 2 / 2;
@@ -87,19 +85,27 @@ main .tiles {
     
 }
 
-.nav-elements#about-me {
+.nav-elements#about-me-button {
     grid-area: 6 / 2 / 7 / 3;
     /* transform: rotateX(180deg); */
 }
 
-.nav-elements#contact-form {
+.nav-elements#contact-form-button {
     grid-area: 5 / 3 / 6 / 4;
     /* transform: rotateY(180deg); */
 }
 
-.nav-elements#socials {
+.nav-elements#socials-button {
     grid-area: 5 / 2 / 6 / 3;
     /* transform: rotateY(180deg); */
 }
 
+#about-me-header {
+    grid-area: 4 / 2 / 5 / 3;
+    color: red;
+}
 
+#about-me-article {
+    grid-area: 5 / 1 / 7 / 4;
+    color: red;
+}
