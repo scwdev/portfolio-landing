@@ -1,20 +1,39 @@
+:root {
+    --tile: 33vw;
+}
+
 * {
     border: 1px solid #000;
 }
 
+body {
+    margin: 0 auto;    
+}
 
 main {
-    
     display: grid;
-    grid-template: repeat(6, 32vw) / repeat(3, 32vw)
+    grid-template: repeat(6, var(--tile)) / repeat(3, var(--tile));
+    padding: 0;
+    
+}
+
+main .tiles {
+    text-align: center;
+    /* align-self: center; */
+    /* display: none; */
 }
 
 #logo {
     grid-area: 2 / 1 / 3 / 3;
 }
 
-#nav {
+#nav-button {
     grid-area: 6 / 3 / 7 / 4;
+}
+
+.fas {
+    transform: scale(4);
+    color: darkgray;
 }
 
 #proj-1 {
@@ -57,3 +76,25 @@ main {
     background: lightsalmon;
     
 }
+
+.nav-elements {
+    transition-duration: .5s;
+    transform: rotateX(90deg);
+}
+
+.nav-elements#about-me {
+    grid-area: 6 / 2 / 7 / 3;
+    /* transform: rotateX(180deg); */
+}
+
+.nav-elements#contact-form {
+    grid-area: 5 / 3 / 6 / 4;
+    /* transform: rotateY(180deg); */
+}
+
+.nav-elements#socials {
+    grid-area: 5 / 2 / 6 / 3;
+    /* transform: rotateY(180deg); */
+}
+
+

@@ -6,8 +6,8 @@
 
 |  Day | Deliverable | Status
 |---|---|---|
-|Day 0| Project Description | Incomplete
-|Day 0| Wireframes / Priority Matrix / Timeline | Incomplete
+|Day 0| Project Description | :heavy_check_mark::heavy_check_mark::heavy_check_mark:
+|Day 0| Wireframes / Priority Matrix / Timeline | :heavy_check_mark::heavy_check_mark::heavy_check_mark:
 |Day 1| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 2| API and Links| Incomplete
 |Day 2| Reactive Structure | Incomplete
@@ -82,7 +82,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Initial HTML+CSS Grid | H | 2hr | ?? |
+| Initial HTML+CSS Grid | H | 2hr | 1hr |
 | Hamburger Nav         | H | 2hr | ?? |
 | Contact Me Form       | M | 2hr | ?? |
 | About Me Page         | M | 2hr | ?? | 

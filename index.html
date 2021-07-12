@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/3c71cbc02f.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./js/app.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <main>
-        <h1 id="logo">Logo</h1>
-        <nav id="nav">
+        <h1 class="tiles" id="logo">Logo</h1>
+
+<!-- traditional 'nav won't work in this structure. -->
+        <!-- <nav id="nav">
             <ul>
                 <li>About Me</li>
                 <li>Contact Form</li>
@@ -20,14 +23,18 @@
                 <li>More Projects</li>
                 <li>Placeholder</li>
             </ul>
-        </nav>
-        <section id="proj-1">Project 1</section>
-        <section id="proj-2">Project 2</section>
-        <section id="proj-3">Project 3</section>
-        <section id="proj-4">Project 4</section>
-        <section id="proj-5">Project 5</section>
-        <section id="proj-6">Project 6</section>
-        <section id="proj-7">Project 7</section>
+        </nav> -->
+        <button class="tiles" id="nav-button"><i class="fas fa-th-large"></i></button>
+        <button class='tiles nav-elements' id="about-me">About Me</button>
+        <button class='tiles nav-elements' id="contact-form">Contact Form</button>
+        <button class='tiles nav-elements' id="socials">Socials</button>
+        <section class="tiles front-and-center" id="proj-1">Project 1</section>
+        <section class="tiles" id="proj-2">Project 2</section>
+        <section class="tiles" id="proj-3">Project 3</section>
+        <section class="tiles" id="proj-4">Project 4</section>
+        <section class="tiles" id="proj-5">Project 5</section>
+        <section class="tiles" id="proj-6">Project 6</section>
+        <section class="tiles" id="proj-7">Project 7</section>
     </main>
     
 </body>
