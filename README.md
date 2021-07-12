@@ -4,23 +4,24 @@
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
-|---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 1| Wireframes / Priority Matrix / Timeline | Incomplete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| MVP & Bug Fixes | Incomplete
-|Day 5| Final Touches | Incomplete
-|Day 6| Present | Incomplete
+|---|---|---|
+|Day 0| Project Description | Incomplete
+|Day 0| Wireframes / Priority Matrix / Timeline | Incomplete
+|Day 1| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|Day 2| API and Links| Incomplete
+|Day 2| Reactive Structure | Incomplete
+|Day 3| MVP & Bug Fixes | Incomplete
+|Day 3| Transition Effects| Incomplete
+|Day 4| Final Touches | Incomplete
+|Day 4| Present | Incomplete
 
 ## Project Description
-I have two main concepts that I'd like to integrate, though I'm concerned #2 may be too big of a bite at this time in my studies:
-	1) I would like my portfolio landing page to be a a dynamic onesheet, using links, transitions, and maybe an <iframe> or two in place of scrolling
-	~~2) I want to try to implement non-rectangular or even trapezoidal design using some combination of transform:skew/rotate and clip-path. Doing this in conjunction with reactive design as well as grid and flexbox will be... a challange.~~
-	2b) After a lot of concept research time, we're gonna stick with a (probably) parallelogram design. Short term goal: 'randomly' destributed tiles on a grid. Long term: actually randomise the tile positions with each reaload. Checkerboard kinda idea.
+
+###### I have two main concepts that I'd like to integrate, though I'm concerned #2 may be too big of a bite at this time in my studies:
+1. I would like my portfolio landing page to be a a dynamic onesheet, using links, transitions, and maybe an <iframe> or two in place of scrolling
+2. ~~I want to try to implement non-rectangular or even trapezoidal design using some combination of transform:skew/rotate and clip-path. Doing this in conjunction with reactive design as well as grid and flexbox will be... a challange.~~
+3. After a lot of concept research time, we're gonna stick with a (probably) parallelogram design. Short term goal: 'randomly' destributed tiles on a grid. Long term: actually randomise the tile positions with each reaload. Checkerboard kinda idea.
 
 
 ## Portfolio I want to Emulate
@@ -36,10 +37,10 @@ Link To Site  | One Thing I'd Like To Incorporate |
 
 ## Wireframes
 
-#### Gotta make them darn wireframes.
+[./img/Portfolio_Wireframe.png](./img/Portfolio_Wireframe.png)
 
 ## Time/Priority Matrix 
-List of features:
+###### List of features:
 * a) Checkerboard grid (mobile first)
   - b) Reactive: Phone size 3x6 squares. Larger viewports = more squares.
 * c) Hamburger for mobile, which will populate navbar to grid squares.
@@ -54,62 +55,60 @@ List of features:
 * k) hover effects over each tile.
 * l) Transition effects for clicking tiles.
 * m) Loooow priority - randomly assigned tile positions.
-* noteverngonnarankit) Dream big feature (like really big): gamify the checkerboard somehow (like a 'chessmode' switch).
 
 ![Image of time/priority matrix](./img/time_priority_matrix.png)
 
 
-### MVP/PostMVP - 5min
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+### MVP/PostMVP
 
-
-#### MVP (examples)
-- Pull data using google json api
-- Render data on page 
-- Allow user to choose favorites 
-- Save their choices in firebase
-
+#### MVP
+- Functional Nav
+- Contact Me form
+- About Me section
+- Project API Structure
+- Project Cards/Links
+- Reactive Layout
+- Logo
 
 #### PostMVP 
-- Anything else that is not MVP
+- Transition Effects
+- Card Hover Effects
+- <iframs>?
+- Random Tile algo
 
 
 ## Functional Components
-Based on the initial logic defined in the previous sections try and breakdown the logic further into functional components, and by that we mean functions.  Try and capture what logic would need to be defined if the game was broken down into the following categories.
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
-
 
 #### MVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Hamburger | H | 1hr | hr |
-| Project Previews | H | 3hr | hr |
-| Regular Nav | H | 1hr | hr |  
-| Adding Form | H | 1.5hr|  hr | 
-| Other sections and flex| M | 3hr | hr|
-| Working with API | H | 3hrs|  hr | 
-| Responsive | H | 3hr | hr | hr |
-| Social Media Icons | L | 1hr |  hr |
-| Total | H | 15.5hrs| hrs |
-
+| Initial HTML+CSS Grid | H | 2hr | ?? |
+| Hamburger Nav         | H | 2hr | ?? |
+| Contact Me Form       | M | 2hr | ?? |
+| About Me Page         | M | 2hr | ?? | 
+| Responsive CSS        | H | 1hr | ?? |
+| Regular Nav           | H | 1hr | ?? |   
+| Generating API        | H | 2hrs| ?? | 
+| Social Media Icons    | L | 1hr | hr |
+| Total                | - | 11hrs| hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| Project Hover | L | 3hr | -hr | hr |
-| Banner letters wiggle | L | 1hr | hr |
-| Interactive Banner | M | 4hr | hr |
-| Materialize | H | 4hr | -hr | hr |
-| Bootstrap | H | 4hr | hr |
-| Make own icon | L | 4hr | hr |
+| Tile Hover Effects | L | 2hr | ?? |
+| Card Transition Effects | ML | 2hr | ?? |
+| Nav Transition Effects | M | 2hr | ?? |
+| Tile Randomiser | L | 3hr | ?? | 
+| <iframes> | L | 3hr | ?? |
 | Total | H | 20hrs| hrs |
 
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project. 
+ At the moment probably only jQuery.
 
 
 ## Code Snippet
+
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 ```
 function reverse(string) {
