@@ -37,7 +37,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
 
 ## Wireframes
 
-[./img/Portfolio_Wireframe.png](./img/Portfolio_Wireframe.png)
+[Wireframe Link](https://res.cloudinary.com/scwd/image/upload/v1626100626/Portfolio_Wireframe_luqs8k.png)
 
 ## Time/Priority Matrix 
 ###### List of features:
