@@ -83,7 +83,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
 | Initial HTML+CSS Grid | H | 2hr | 1hr |
-| Hamburger Nav         | H | 2hr | ?? |
+| Hamburger Nav         | H | 2hr | 3.5hr |
 | Contact Me Form       | M | 2hr | ?? |
 | About Me Page         | M | 2hr | ?? | 
 | Responsive CSS        | H | 1hr | ?? |

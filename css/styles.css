@@ -12,6 +12,7 @@ body {
 
 main {
     display: grid;
+    perspective: calc(3*(var(--tile)));
     grid-template: repeat(6, var(--tile)) / repeat(3, var(--tile));
     padding: 0;
     
@@ -78,8 +79,12 @@ main .tiles {
 }
 
 .nav-elements {
-    transition-duration: .5s;
-    transform: rotateX(90deg);
+    margin: 0;
+    padding: 0;
+    transform-origin: top;
+    backface-visibility: hidden;
+    transform: rotateX(-90deg)
+    
 }
 
 .nav-elements#about-me {
