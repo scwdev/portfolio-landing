@@ -1,0 +1,59 @@
+* {
+    border: 1px solid #000;
+}
+
+
+main {
+    
+    display: grid;
+    grid-template: repeat(6, 32vw) / repeat(3, 32vw)
+}
+
+#logo {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+#nav {
+    grid-area: 6 / 3 / 7 / 4;
+}
+
+#proj-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    background: teal;
+}
+
+#proj-2 {
+    grid-area: 2 / 3 / 3 / 4;
+    background: purple;
+}
+
+#proj-3 {
+    grid-area: 3 / 2 / 4 / 3;
+    background: magenta;
+}
+
+/* #proj-3:hover{
+    transition-duration: 2s;
+    transform: translateY(-32vw);
+} */
+
+#proj-4 {
+    grid-area: 4 / 1 / 5 / 2;
+    background: yellowgreen;    
+}
+
+#proj-5 {
+    grid-area: 4 / 2 / 5 / 3;
+    background: cadetblue;
+}
+
+#proj-6 {
+    grid-area: 4 / 3 / 5 / 4;
+    background: goldenrod;
+}
+
+#proj-7 {
+    grid-area: 5 / 1 / 6 / 2;
+    background: lightsalmon;
+    
+}
