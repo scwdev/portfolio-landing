@@ -85,7 +85,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
 | Initial HTML+CSS Grid | H | 2hr | 1hr |
 | Hamburger Nav         | H | 2hr | 3.5hr |
 | Contact Me Form       | M | 2hr | ?? |
-| About Me Page         | M | 2hr | ?? | 
+| About Me Page         | M | 2hr | 2hr | 
 | Responsive CSS        | H | 1hr | ?? |
 | Regular Nav           | H | 1hr | ?? |   
 | Generating API        | H | 2hrs| ?? | 

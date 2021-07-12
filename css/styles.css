@@ -1,5 +1,5 @@
 :root {
-    --tile: 33vw;
+    --tile: calc(((90vh)/6))
 }
 
 * {
@@ -11,6 +11,7 @@ body {
 }
 
 main {
+    
     display: grid;
     perspective: calc(3*(var(--tile)));
     grid-template: repeat(6, var(--tile)) / repeat(3, var(--tile));

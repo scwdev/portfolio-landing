@@ -16,8 +16,8 @@ const $proj6 = $('#proj-6')
 const $proj7 = $('#proj-7')
 
 // About Me section DOM
-const $aboutMeH3 = $('<h3>').attr('id','about-me-header').text('About Me')
-const $aboutMeArticle = $('<article>').attr('id', 'about-me-article').html(`<p id='about-me-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in. Odio pellentesque diam volutpat commodo sed egestas. Nam aliquam sem et tortor consequat id porta nibh venenatis. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Id ornare arcu odio ut sem nulla pharetra diam. Nec ultrices dui sapien eget mi proin sed. Hendrerit dolor magna eget est. Porta nibh venenatis cras sed felis. Nisl condimentum id venenatis a. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Tortor id aliquet lectus proin nibh. Quam nulla porttitor massa id neque. Aliquam ultrices sagittis orci a. Cum sociis natoque penatibus et magnis. Vel elit scelerisque mauris pellentesque. At lectus urna duis convallis. Tempor id eu nisl nunc mi ipsum</p>`)
+const $aboutMeH3 = $('<h3>').addClass('nav-item').attr('id','about-me-header').text('About Me')
+const $aboutMeArticle = $('<article>').addClass('nav-item').attr('id', 'about-me-article').html(`<p id='about-me-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in. Odio pellentesque diam volutpat commodo sed egestas. Nam aliquam sem et tortor consequat id porta nibh venenatis. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Id ornare arcu odio ut sem nulla pharetra diam. Nec ultrices dui sapien eget mi proin sed. Hendrerit dolor magna eget est. Porta nibh venenatis cras sed felis. Nisl condimentum id venenatis a. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Tortor id aliquet lectus proin nibh. Quam nulla porttitor massa id neque. Aliquam ultrices sagittis orci a. Cum sociis natoque penatibus et magnis. Vel elit scelerisque mauris pellentesque. At lectus urna duis convallis. Tempor id eu nisl nunc mi ipsum</p>`)
     
 
 const navShow = () => {
@@ -66,17 +66,22 @@ const translateReturn = () => {
 const aboutMe = () => {
     translateAll()
     navHide()
+    // $aboutMeArticle.css('opacity', '1')
     $aboutMeH3.appendTo($main)
     $aboutMeArticle.appendTo($main)
 }
 
-const aboutMeRemove = () => {
-    $aboutMeH3.remove()
-    $aboutMeArticle.remove()
+const navItemRemove = () => {
+    console.log($('.nav-item').length)
+    if ($('.nav-item').length > 0) {
+        $('.nav-item').css('transform', 'translateY(calc(4*(var(--tile))))')
+            .delay(500).queue(() => {$('.nav-item').removeAttr('style').remove()})
+    }
 }
 
 
-
+// Conditionals:
+// aboutMeRemove()
 
 
 
@@ -84,12 +89,12 @@ const aboutMeRemove = () => {
 
 $navButton.on('click', navShow)
 $(window).on('click', (e) => {
-    console.log($(e.target).attr('id'))
+    // console.log($(e.target).attr('id'))
     if ($(e.target).attr('id') === 'nav-button' ||
         e.target.className == '') {
         translateReturn()
         navHide()
-        aboutMeRemove()
+        navItemRemove()
     }
 })
 $aboutMeButton.on('click', aboutMe)
