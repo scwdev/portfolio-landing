@@ -19,7 +19,7 @@
 ## Project Description
 
 ###### I have two main concepts that I'd like to integrate, though I'm concerned #2 may be too big of a bite at this time in my studies:
-1. I would like my portfolio landing page to be a a dynamic onesheet, using links, transitions, and maybe an <iframe> or two in place of scrolling
+1. I would like my portfolio landing page to be a a dynamic onesheet, using links, transitions, and maybe an iframe or two in place of scrolling
 2. ~~I want to try to implement non-rectangular or even trapezoidal design using some combination of transform:skew/rotate and clip-path. Doing this in conjunction with reactive design as well as grid and flexbox will be... a challange.~~
 3. After a lot of concept research time, we're gonna stick with a (probably) parallelogram design. Short term goal: 'randomly' destributed tiles on a grid. Long term: actually randomise the tile positions with each reaload. Checkerboard kinda idea.
 
@@ -48,7 +48,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
   - about me, contact form, linkedin, resume
 * e) "nav" for larger format will be links dispersed on the checkerboard
 * f) project placeholders/previews (snapshots first)
-  - g) long term <iframe> based tiles that transition to fill the screen.
+  - g) long term iframe based tiles that transition to fill the screen.
 * h) Generate API (placeholder first... need projects!)
 * i) Initial logo ('blankSpace')
   - j) display on white sheet then transition effect to checkerboard
@@ -73,7 +73,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
 #### PostMVP 
 - Transition Effects
 - Card Hover Effects
-- <iframs>?
+- iframs?
 - Random Tile algo
 
 
@@ -99,7 +99,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
 | Card Transition Effects | ML | 2hr | ?? |
 | Nav Transition Effects | M | 2hr | ?? |
 | Tile Randomiser | L | 3hr | ?? | 
-| <iframes> | L | 3hr | ?? |
+| iframes | L | 3hr | ?? |
 | Total | H | 20hrs| hrs |
 
 
