@@ -4,9 +4,9 @@
 
 * {
     transition-duration: .5s;
-    -webkit-backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
+    backface-visibility: hidden; */
 }
 
 body {
@@ -17,11 +17,11 @@ main {
     display: grid;
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
-    perspective: calc(1000px);
-    perspective-origin: top;
+    perspective: 1000px;
+    /* perspective-origin: top; */
     grid-template: repeat(6, var(--tile)) / repeat(3, var(--tile));
     padding: 0;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
     
 }
 
@@ -34,9 +34,9 @@ main .tiles {
 button, div {
     background: grey;
     border: none;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
+    -moz-backface-visibility: hidden; */
 
 }
 
@@ -96,17 +96,17 @@ button, div {
     margin: 0;
     padding: 0;
     transform-origin: top;
-    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    /* transform: rotateX(0) */
+    backface-visibility: hidden;
+    transform: rotateX(-135deg)
     
 }
 
 .nav-elements#about-me-button {
-    -webkit-backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
+    backface-visibility: hidden; */
     grid-area: 6 / 2 / 7 / 3;
     /* transform: rotateX(180deg); */
 }
