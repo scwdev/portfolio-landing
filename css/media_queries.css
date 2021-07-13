@@ -21,6 +21,7 @@
     }
 
     #nav-button {
+        grid-area: 1 / 3 / 2 / 4;
         display: none;
     }
 
@@ -83,11 +84,58 @@
         grid-area: 5 / 1 / 6 / 2;
     }
 
-    .translate-small {
+    /* -------------------------------------------- */
+            /* About Me Moves */
+    /* -------------------------------------------- */
 
+
+    /* don't love the important in this block. needs work */
+    .translate-nav-about, .translate-nav-contact {
+        display: block !important;
+        transform: translateY(0);    
     }
 
-    .translate-medium {
-        
+    .translate-proj-1-about, .translate-proj-1-contact {
+        transform: translateY(0);
+    }
+
+    .translate-proj-2-about, .translate-proj-2-contact {
+        transform: translateY(0);
+    }
+
+    .translate-proj-3-about, .translate-proj-3-contact {
+        transform: translateX(calc(-1*(var(--tile))));    
+    }
+
+    .translate-proj-4-about, .translate-proj-4-contact {
+        transform: translateY(0);
+    }
+
+    .translate-proj-5-about, .translate-proj-5-contact {
+        transform: translateX(calc(-1*(var(--tile))));
+    }
+
+    .translate-proj-6-about, .translate-proj-6-contact {
+        transform: translateX(calc((var(--tile))));    
+    }
+
+    .translate-proj-7-about {
+        transform: translateX(calc(2*(var(--tile))));
+    }
+
+    .translate-proj-7-contact {
+        transform: translateY(0);
+    }
+
+    #about-me-header {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    #about-me-article {
+        grid-area: 3 / 2 / 6 / 5;
+    }
+
+    #contact-form {
+        grid-area: 3 / 2 / 5 / 5;
     }
 }
