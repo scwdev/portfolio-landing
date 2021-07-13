@@ -4,6 +4,7 @@ const $main = $('main')
 const $navButton = $('#nav-button')
 const $navElements = $('.nav-elements')
 const $aboutMeButton = $('#about-me-button')
+const $contactFormButton = $('#contact-form-button')
 
 const $projects = $('.projects')
 const $logo = $('#logo')
@@ -19,6 +20,21 @@ const $proj7 = $('#proj-7')
 const $aboutMeH3 = $('<h3>').addClass('nav-item').attr('id','about-me-header').text('About Me')
 const $aboutMeArticle = $('<article>').addClass('nav-item').attr('id', 'about-me-article').html(`<p id='about-me-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in. Odio pellentesque diam volutpat commodo sed egestas. Nam aliquam sem et tortor consequat id porta nibh venenatis. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Id ornare arcu odio ut sem nulla pharetra diam. Nec ultrices dui sapien eget mi proin sed. Hendrerit dolor magna eget est. Porta nibh venenatis cras sed felis. Nisl condimentum id venenatis a. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Tortor id aliquet lectus proin nibh. Quam nulla porttitor massa id neque. Aliquam ultrices sagittis orci a. Cum sociis natoque penatibus et magnis. Vel elit scelerisque mauris pellentesque. At lectus urna duis convallis. Tempor id eu nisl nunc mi ipsum</p>`)
     
+// Contact Form section DOM
+const $contactForm = $('<div>').addClass('nav-item').attr('id', 'contact-form').html(`
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xdoylebg" method="post">
+        <fieldset id="fs-frm-inputs">
+            <label for="full-name">Full Name</label>
+            <input type="text" name="name" id="full-name" placeholder="First and Last" required=""><br/>
+            <label for="email-address">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required=""><br/>
+            <label for="message">Message</label><br/>
+            <textarea  name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"><br/>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>`)
+
 
 const navShow = () => {
     $navElements.css({
@@ -48,7 +64,15 @@ const translate26 = () => {
     $proj6.css('transform', 'translateY(calc(-2*(var(--tile)))')
 }
 
-const translateNav = () => {
+const translate6y1 = () => {
+    $proj6.css('transform', 'translateY(calc(-1*(var(--tile)))')
+}
+
+const translateNav2 = () => {
+    $navButton.css('transform', 'translateY(calc(-2*(var(--tile)))')
+}
+
+const translateNav3 = () => {
     $navButton.css('transform', 'translateY(calc(-3*(var(--tile)))')
 }
 
@@ -56,7 +80,7 @@ const translateAll = () => {
     translate47()
     translate35()
     translate26()
-    translateNav()
+    translateNav3()
 }
 
 const translateReturn = () => {
@@ -65,37 +89,38 @@ const translateReturn = () => {
 }
 
 const aboutMe = () => {
+    // $aboutMeH3.css('transform', 'translateY(calc(4*(var(--tile))))')
     translateAll()
     navHide()
-    // $aboutMeArticle.css('opacity', '1')
-    $aboutMeH3.appendTo($main)
-    $aboutMeArticle.appendTo($main)
+    $aboutMeH3.appendTo($main).delay(1).queue(() => {$aboutMeH3.css('transform', 'translateY(0)')})
+    $aboutMeArticle.appendTo($main).delay(1).queue(() => {$aboutMeArticle.css('transform', 'translateY(0)')})
+}
+
+const contactForm = () => {
+    translateNav2()
+    translate47()
+    translate6y1()
+    navHide()
+    $contactForm.appendTo($main)
 }
 
 const navItemRemove = () => {
-    console.log($('.nav-item').length)
     if ($('.nav-item').length > 0) {
-        $('.nav-item').css('transform', 'translateY(calc(4*(var(--tile))))')
-            .delay(500).queue(() => {$('.nav-item').removeAttr('style').remove()})
+        $('.nav-item').remove()
     }
 }
-
-
-// Conditionals:
-// aboutMeRemove()
-
-
 
 // EVENT HANDLERS 
 
 $navButton.on('click', navShow)
 $(window).on('click', (e) => {
     // console.log($(e.target).attr('id'))
-    if ($(e.target).attr('id') === 'nav-button' ||
-        e.target.className == '') {
+    if ($(e.target).attr('id') === 'nav-button' || e.target.className == undefined) {
         translateReturn()
         navHide()
         navItemRemove()
-    }
+    };
 })
+
 $aboutMeButton.on('click', aboutMe)
+$contactFormButton.on('click', contactForm)

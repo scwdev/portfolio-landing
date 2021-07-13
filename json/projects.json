@@ -4,6 +4,7 @@
       "description":"example1",
       "github": "http://...",
       "deployed": "http://...",
+      "thumbnail": "http://...",
       "image": "http://..."
     }
   ]

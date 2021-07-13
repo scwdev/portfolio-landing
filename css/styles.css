@@ -3,10 +3,7 @@
 }
 
 * {
-    transition-duration: .5s;
-    /* -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden; */
+    transition-duration: .75s;
 }
 
 body {
@@ -15,29 +12,32 @@ body {
 
 main {
     display: grid;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective: 1000px;
-    /* perspective-origin: top; */
+    -webkit-perspective: calc(3*(var(--tile)));
+    perspective: calc(3*(var(--tile)));
     grid-template: repeat(6, var(--tile)) / repeat(3, var(--tile));
-    padding: 0;
-    /* backface-visibility: hidden; */
-    
+    padding: 0;    
 }
 
 main .tiles {
     text-align: center;
-    /* align-self: center; */
-    /* display: none; */
+    box-shadow: inset 20px 20px 25px  rgba(255,255,255,.3),
+                inset -20px -20px 25px  rgba(0,0,0,.2)
+                
+}
+
+.tiles:active {
+    transition-duration: .1s;
+    box-shadow: inset 25px 25px 25px  rgba(255,255,255,.2),
+                inset -25px -25px 25px  rgba(0,0,0,.1),
+                inset 5px 5px 10px  rgba(0,0,0,.5),
+                inset -10px -10px 15px  rgba(0,0,0,.2)
+    /* box-shadow: inset 25px 25px 25px  rgba(0,0,0,.1),
+                inset -25px -25px 25px  rgba(255,255,255,.2) */
 }
 
 button, div {
     background: whitesmoke;
     border: none;
-    /* backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden; */
-
 }
 
 #logo {
@@ -47,9 +47,8 @@ button, div {
 #nav-button {
     grid-area: 6 / 3 / 7 / 4;
     font-size: calc(0.5*(var(--tile)));
-    color: whitesmoke;
+    color: grey;
 }
-
 
 #proj-1 {
     grid-area: 1 / 1 / 2 / 2;
@@ -65,11 +64,6 @@ button, div {
     grid-area: 3 / 2 / 4 / 3;
     background: magenta;
 }
-
-/* #proj-3:hover{
-    transition-duration: 2s;
-    transform: translateY(-32vw);
-} */
 
 #proj-4 {
     grid-area: 4 / 1 / 5 / 2;
@@ -97,36 +91,51 @@ button, div {
     padding: 0;
     transform-origin: top;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: rotateX(-135deg)
     
 }
 
 .nav-elements#about-me-button {
-    /* -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden; */
     grid-area: 6 / 2 / 7 / 3;
-    /* transform: rotateX(180deg); */
+
 }
 
 .nav-elements#contact-form-button {
     grid-area: 5 / 3 / 6 / 4;
-    /* transform: rotateY(180deg); */
 }
 
 .nav-elements#socials-button {
     grid-area: 5 / 2 / 6 / 3;
-    /* transform: rotateY(180deg); */
 }
 
 #about-me-header {
     grid-area: 4 / 2 / 5 / 3;
-    color: red;
+    transform: translateY(1000px);
 }
 
 #about-me-article {
     grid-area: 5 / 1 / 7 / 4;
-    color: red;
+    transform: translateY(1000px);
+}
+
+#contact-form {
+    grid-area: 5 / 1 / 7 / 4;
+    /* text-align: center; */
+}
+
+fieldset#fs-frm-inputs {
+    margin: 0 auto;
+    height: calc((1.9*(var(--tile))));
+    padding: 0 5%;
+}
+
+#full-name, #email-address, #message {
+    display: inline-block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+#message {
+    height: 6em;
 }
