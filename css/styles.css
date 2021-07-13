@@ -4,6 +4,8 @@
 
 * {
     transition-duration: .5s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 body {
@@ -13,7 +15,7 @@ body {
 main {
     
     display: grid;
-    perspective: calc(3*(var(--tile)));
+    perspective: calc(2*(var(--tile)));
     grid-template: repeat(6, var(--tile)) / repeat(3, var(--tile));
     padding: 0;
     
@@ -27,8 +29,8 @@ main .tiles {
 
 button {
     background: none;
-    border: none;
-    
+    /* border: none; */
+
 }
 
 #logo {
