@@ -32,7 +32,7 @@ main .tiles {
 }
 
 button, div {
-    background: grey;
+    background: whitesmoke;
     border: none;
     /* backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -47,7 +47,7 @@ button, div {
 #nav-button {
     grid-area: 6 / 3 / 7 / 4;
     font-size: calc(0.5*(var(--tile)));
-    color: gray;
+    color: whitesmoke;
 }
 
 
