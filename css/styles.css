@@ -3,11 +3,15 @@
 }
 
 * {
-    transition-duration: .75s;
+    transition-duration: 400ms;
 }
 
 body {
-    margin: 0 auto;    
+    /* margin: 0 auto;     */
+    /* justify-items: center; */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
 }
 
 main {
@@ -15,7 +19,9 @@ main {
     -webkit-perspective: calc(3*(var(--tile)));
     perspective: calc(3*(var(--tile)));
     grid-template: repeat(6, var(--tile)) / repeat(3, var(--tile));
-    padding: 0;    
+    /* text-align: center; */
+    /* padding: 0; */
+    
 }
 
 main .tiles {
@@ -26,7 +32,6 @@ main .tiles {
 }
 
 .tiles:active {
-    transition-duration: .1s;
     box-shadow: inset 25px 25px 25px  rgba(255,255,255,.2),
                 inset -25px -25px 25px  rgba(0,0,0,.1),
                 inset 5px 5px 10px  rgba(0,0,0,.5),
@@ -125,17 +130,93 @@ button, div {
 }
 
 fieldset#fs-frm-inputs {
+    display: grid;
+    grid-template: repeat(2, 1.5em) 1fr 1fr / 1fr 2fr;
     margin: 0 auto;
     height: calc((1.9*(var(--tile))));
     padding: 0 5%;
 }
 
-#full-name, #email-address, #message {
+/* #full-name, #email-address, #message {
     display: inline-block;
     margin: 0 auto;
     width: 90%;
-}
+} */
 
 #message {
-    height: 6em;
+    grid-area: 3 / 2 / 5 / 3;
+}
+
+
+/* -------------------------------------------- */
+        /* About Me Moves */
+/* -------------------------------------------- */
+
+.translate-nav-about {
+    transform: translateY(calc(-3*(var(--tile))));    
+}
+
+.translate-proj-1-about {
+    transform: translateY(0);
+}
+
+.translate-proj-2-about {
+    transform: translateY(calc(-1*(var(--tile))));
+}
+
+.translate-proj-3-about {
+    transform: translateY(calc(-2*(var(--tile))));    
+}
+
+.translate-proj-4-about {
+    transform: translateY(calc(-1*(var(--tile))));
+}
+
+.translate-proj-5-about {
+    transform: translateY(calc(-1*(var(--tile))));
+}
+
+.translate-proj-6-about {
+    transform: translateY(calc(-2*(var(--tile))));    
+}
+
+.translate-proj-7-about {
+    transform: translateY(calc(-1*(var(--tile))));
+}
+
+
+/* -------------------------------------------- */
+        /* Contact Form Moves */
+/* -------------------------------------------- */
+
+.translate-nav-contact {
+    transform: translateY(calc(-2*(var(--tile))));    
+}
+
+.translate-proj-1-contact {
+    transform: translateY(0);
+}
+
+.translate-proj-2-contact {
+    transform: translateY(0);
+}
+
+.translate-proj-3-contact {
+    transform: translateY(calc(-2*(var(--tile))));    
+}
+
+.translate-proj-4-contact {
+    transform: translateY(calc(-1*(var(--tile))));
+}
+
+.translate-proj-5-contact {
+    transform: translateY(calc(-1*(var(--tile))));
+}
+
+.translate-proj-6-contact {
+    transform: translateY(calc(-1*(var(--tile))));    
+}
+
+.translate-proj-7-contact {
+    transform: translateY(calc(-1*(var(--tile))));
 }

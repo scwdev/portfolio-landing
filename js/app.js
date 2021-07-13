@@ -1,20 +1,3 @@
-// console.log($(window).width())
-
-const $main = $('main')
-const $navButton = $('#nav-button')
-const $navElements = $('.nav-elements')
-const $aboutMeButton = $('#about-me-button')
-const $contactFormButton = $('#contact-form-button')
-
-const $projects = $('.projects')
-const $logo = $('#logo')
-const $proj1 = $('#proj-1')
-const $proj2 = $('#proj-2')
-const $proj3 = $('#proj-3')
-const $proj4 = $('#proj-4')
-const $proj5 = $('#proj-5')
-const $proj6 = $('#proj-6')
-const $proj7 = $('#proj-7')
 
 // About Me section DOM
 const $aboutMeH3 = $('<h3>').addClass('nav-item').attr('id','about-me-header').text('About Me')
@@ -25,12 +8,12 @@ const $contactForm = $('<div>').addClass('nav-item').attr('id', 'contact-form').
     <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xdoylebg" method="post">
         <fieldset id="fs-frm-inputs">
             <label for="full-name">Full Name</label>
-            <input type="text" name="name" id="full-name" placeholder="First and Last" required=""><br/>
+            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
             <label for="email-address">Email Address</label>
-            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required=""><br/>
-            <label for="message">Message</label><br/>
+            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+            <label for="message">Message</label>
             <textarea  name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
-            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"><br/>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
             <input type="submit" value="Submit">
         </fieldset>
     </form>`)
@@ -46,60 +29,39 @@ const navHide = () => {
     if ($navElements.css('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
         $navElements.css('transform','rotateX(-90.00001deg)')
         $navElements.css('backface-visibility','hidden')
-    }   }
-
-
-const translate47 = () => {
-    $proj4.css('transform','translateY(calc(-1*(var(--tile)))')
-    $proj7.css('transform', 'translateY(calc(-1*(var(--tile)))')
+    }
 }
 
-const translate35 = () => {
-    $proj3.css('transform','translateY(calc(-2*(var(--tile)))')
-    $proj5.css('transform', 'translateY(calc(-1*(var(--tile)))')    
+const translateNav = (content) => {
+        $navButton.addClass(`translate-nav-${content}`)
 }
 
-const translate26 = () => {
-    $proj2.css('transform','translateY(calc(-1*(var(--tile)))')
-    $proj6.css('transform', 'translateY(calc(-2*(var(--tile)))')
-}
-
-const translate6y1 = () => {
-    $proj6.css('transform', 'translateY(calc(-1*(var(--tile)))')
-}
-
-const translateNav2 = () => {
-    $navButton.css('transform', 'translateY(calc(-2*(var(--tile)))')
-}
-
-const translateNav3 = () => {
-    $navButton.css('transform', 'translateY(calc(-3*(var(--tile)))')
-}
-
-const translateAll = () => {
-    translate47()
-    translate35()
-    translate26()
-    translateNav3()
+const translateFor = (content) => {
+    $projects.each(function(i) {
+         $(this).addClass(`translate-proj-${(i+1)}-${content}`)
+    })
+    translateNav(content)
 }
 
 const translateReturn = () => {
-    $projects.css('transform', 'translateY(0)')
-    $navButton.css('transform', 'translateY(0)')
+    $projects.each(function(i) {
+        $(this).removeClass(`translate-proj-${(i+1)}-about`)
+        $(this).removeClass(`translate-proj-${(i+1)}-contact`)
+   })
+   $navButton.removeClass('translate-nav-about')
+   $navButton.removeClass('translate-nav-contact')
 }
 
 const aboutMe = () => {
     // $aboutMeH3.css('transform', 'translateY(calc(4*(var(--tile))))')
-    translateAll()
+    translateFor('about')
     navHide()
     $aboutMeH3.appendTo($main).delay(1).queue(() => {$aboutMeH3.css('transform', 'translateY(0)')})
     $aboutMeArticle.appendTo($main).delay(1).queue(() => {$aboutMeArticle.css('transform', 'translateY(0)')})
 }
 
 const contactForm = () => {
-    translateNav2()
-    translate47()
-    translate6y1()
+    translateFor('contact')
     navHide()
     $contactForm.appendTo($main)
 }

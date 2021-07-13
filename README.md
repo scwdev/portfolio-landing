@@ -84,7 +84,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
 | --- | :---: |  :---: | :---: | 
 | Initial HTML+CSS Grid | H | 2hr | 1hr |
 | Hamburger Nav         | H | 2hr | 3.5hr |
-| Contact Me Form       | M | 2hr | ?? |
+| Contact Me Form       | M | 2hr | 1.25hr |
 | About Me Page         | M | 2hr | 2hr | 
 | Responsive CSS        | H | 1hr | ?? |
 | Regular Nav           | H | 1hr | ?? |   
@@ -97,7 +97,7 @@ Link To Site  | One Thing I'd Like To Incorporate |
 | --- | :---: |  :---: | :---: | 
 | Tile Hover Effects | L | 2hr | ?? |
 | Card Transition Effects | ML | 2hr | ?? |
-| Nav Transition Effects | M | 2hr | ?? |
+| Nav Transition Effects | M | 2hr | so much |
 | Tile Randomiser | L | 3hr | ?? | 
 | iframes | L | 3hr | ?? |
 | Total | H | 20hrs| hrs |

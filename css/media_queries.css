@@ -1,0 +1,93 @@
+@media screen and (min-width: 768px) {
+    main{
+        
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --tile: calc(((90vh)/5))
+    }
+        
+    main {
+        grid-template: repeat(5, var(--tile)) / repeat(5, var(--tile));
+        -webkit-perspective-origin: top;
+        perspective-origin: top;
+    }
+
+    #logo {
+        grid-area: 2 / 3 / 3 / 5;
+    }
+
+    #nav-button {
+        display: none;
+    }
+
+    #proj-1 {
+        grid-area: 1 / 1 / 2 / 2;
+        background: teal;
+    }
+
+    #proj-2 {
+        grid-area: 1 / 4 / 2 / 5;
+        background: purple;
+    }
+
+    #proj-3 {
+        grid-area: 3 / 2 / 4 / 3;
+        background: magenta;
+    }
+
+    #proj-4 {
+        grid-area: 3 / 5 / 4 / 6;
+        background: yellowgreen;    
+    }
+
+    #proj-5 {
+        grid-area: 4 / 2 / 5 / 3;
+        background: cadetblue;
+    }
+
+    #proj-6 {
+        grid-area: 4 / 4 / 5 / 5;
+        background: goldenrod;
+    }
+
+    #proj-7 {
+        grid-area: 5 / 3 / 6 / 4;
+        background: lightsalmon;
+        
+    }
+
+    .nav-elements {
+        margin: 0;
+        padding: 0;
+        transform-origin: top;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: rotateX(0deg)
+        
+    }
+
+    .nav-elements#about-me-button {
+        grid-area: 4 / 3 / 5 / 4;
+
+    }
+
+    .nav-elements#contact-form-button {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .nav-elements#socials-button {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    .translate-small {
+
+    }
+
+    .translate-medium {
+        
+    }
+}
