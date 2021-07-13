@@ -29,6 +29,7 @@ const navShow = () => {
 const navHide = () => {
     if ($navElements.css('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
         $navElements.css('transform','rotateX(-90deg)')
+        $navElements.css('backface-visibility','hidden')
     }   }
 
 
