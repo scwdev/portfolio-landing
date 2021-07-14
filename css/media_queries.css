@@ -92,7 +92,7 @@
     }
 
     .translate-socials-button-about {
-
+        transform: translateX(calc(-1*(var(--tile))));    
     }
 
     .translate-about-me-button-contact {
@@ -132,6 +132,7 @@
     }
 
     .translate-proj-1-about, .translate-proj-1-contact, .translate-proj-1-cards  {
+        opacity: 1;
         transform: translateY(0);
     }
 
@@ -140,30 +141,37 @@
     }
 
     .translate-proj-2-cards {
+        opacity: 1;
         transform: translateX(calc((var(--tile))));    
     }
 
     .translate-proj-3-about, .translate-proj-3-contact, .translate-proj-3-cards {
+        opacity: 1;
         transform: translateX(calc(-1*(var(--tile))));    
     }
 
     .translate-proj-4-about, .translate-proj-4-contact, .translate-proj-4-cards {
+        opacity: 1;
         transform: translateY(0);
     }
 
     .translate-proj-5-about, .translate-proj-5-contact, .translate-proj-5-cards {
+        opacity: 1;
         transform: translateX(calc(-1*(var(--tile))));
     }
 
     .translate-proj-5-cards {
+        opacity: 1;
         transform: translateY(calc(-3*(var(--tile))));
     }    
 
     .translate-proj-6-about, .translate-proj-6-contact, .translate-proj-6-cards {
+        opacity: 1;
         transform: translateX(calc((var(--tile))));    
     }
 
     .translate-proj-7-about, .translate-proj-7-cards {
+        opacity: 1;
         transform: translateX(calc(2*(var(--tile))));
     }
 
@@ -171,14 +179,28 @@
         transform: translateX(calc(var(--tile)));    
     }
 
+    #about-me-div {
+        grid-area: 2 / 2 / 6 / 5;
+        display: grid;
+        grid-template: 25% 75% / 33.33% 66.66%;
+    }
+
     #about-me-header {
-        grid-area: 2 / 2 / 3 / 3;
+        grid-area: 1 / 1 / 2 / 2;
     }
-
+    
     #about-me-article {
-        grid-area: 3 / 2 / 6 / 5;
+        grid-area: 2 / 1 / 3 / 3;
     }
 
+    #portrait {
+        padding: .4em
+    }
+
+    #about-me-article p {
+        margin-top: 0
+    }
+    
     #contact-form {
         grid-area: 3 / 2 / 5 / 5;
     }
