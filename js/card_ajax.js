@@ -11,7 +11,7 @@ $.ajax('./json/projects.json')
         $(this).css({
             'background-image': `url(${data[i].tile})`,
             'background-size': 'cover'
-        }).html(`<h5>${data[i].name}</h5>`)
+        }).text(`${data[i].name}`)
     })
     $projectButtons.each(function(i) {    
         $('<article>').addClass('project-cards display-none').attr('id',`card-${(i+1)}`).css({
