@@ -20,69 +20,162 @@ const $contactForm = $('<div>').addClass('nav-item').attr('id', 'contact-form').
 
 
 const navShow = () => {
-    $navElements.css({
-        'transform': 'rotateX(0deg)'
-    })
+    $navElements.removeClass('hide-nav-elements')
+    $navElements.addClass('show-nav-elements')
+}
+const navHide = () => {
+    $navElements.removeClass('show-nav-elements')
+    $navElements.addClass('hide-nav-elements')
+}
+navHide()
+
+const navToggle = () => {
+    if ($navElements.hasClass('show-nav-elements')) {
+        navHide()
+    } else {
+        navShow()
+    }
 }
 
-const navHide = () => {
-    if ($navElements.css('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
-        $navElements.css('transform','rotateX(-90.00001deg)')
-        $navElements.css('backface-visibility','hidden')
-    }
+const translateNavElements = (content) => {
+    $navButton.addClass(`translate-nav-${content}`)
+    $aboutMeButton.addClass(`translate-about-me-button-${content}`)
+    $contactFormButton.addClass(`translate-contact-form-button-${content}`)
+    $socialsButton.addClass(`translate-socials-button-${content}`)
+}
+
+const translateLogo = (content) => {
+    $logo.addClass(`translate-logo-${content}`)
+}
+
+
+////////////////////////
+// TRANSLATION FUNCTIONS
+////////////////////////
+
+const translateFor = (content) => {
+    navItemRemove()
+    hideCards()
+    translateReturn()
+    translateNavElements(content)
+    translateNav(content)
+    translateTiles(content)
+    translateLogo(content)
 }
 
 const translateNav = (content) => {
         $navButton.addClass(`translate-nav-${content}`)
 }
-
-const translateFor = (content) => {
-    $projects.each(function(i) {
-         $(this).addClass(`translate-proj-${(i+1)}-${content}`)
-    })
-    translateNav(content)
+const translateTiles = (content) => {
+    $projectButtons.each(function(i) {
+        $(this).addClass(`translate-proj-${(i+1)}-${content}`)
+   })
 }
 
+// this part is... ugly.
 const translateReturn = () => {
-    $projects.each(function(i) {
+    $projectButtons.each(function(i) {
         $(this).removeClass(`translate-proj-${(i+1)}-about`)
         $(this).removeClass(`translate-proj-${(i+1)}-contact`)
-   })
-   $navButton.removeClass('translate-nav-about')
-   $navButton.removeClass('translate-nav-contact')
+        $(this).removeClass(`translate-proj-${(i+1)}-cards`)
+    })
+    $navButton.removeClass('translate-nav-about')
+    $navButton.removeClass('translate-nav-contact')
+    $navButton.removeClass(`translate-nav-cards`)
+    $aboutMeButton.removeClass(`translate-about-me-button-about`)
+    $aboutMeButton.removeClass(`translate-about-me-button-contact`)
+    $aboutMeButton.removeClass(`translate-about-me-button-cards`)
+    $contactFormButton.removeClass(`translate-contact-form-button-about`)
+    $contactFormButton.removeClass(`translate-contact-form-button-contact`)
+    $contactFormButton.removeClass(`translate-contact-form-button-cards`)
+    $socialsButton.removeClass(`translate-socials-button-about`)
+    $socialsButton.removeClass(`translate-socials-button-contact`)
+    $socialsButton.removeClass(`translate-socials-button-cards`)
+    $logo.removeClass('translate-logo-cards')
+
 }
+
 
 const aboutMe = () => {
     // $aboutMeH3.css('transform', 'translateY(calc(4*(var(--tile))))')
+    translateReturn()
     translateFor('about')
     navHide()
     $aboutMeH3.appendTo($main).delay(1).queue(() => {$aboutMeH3.css('transform', 'translateY(0)')})
     $aboutMeArticle.appendTo($main).delay(1).queue(() => {$aboutMeArticle.css('transform', 'translateY(0)')})
 }
-
 const contactForm = () => {
+    translateReturn()
     translateFor('contact')
     navHide()
     $contactForm.appendTo($main)
 }
-
 const navItemRemove = () => {
     if ($('.nav-item').length > 0) {
         $('.nav-item').remove()
     }
 }
 
-// EVENT HANDLERS 
 
-$navButton.on('click', navShow)
+const showCards = (i) => {
+    translateReturn
+    translateFor('cards')
+    $('.project-cards').addClass('display-none')
+    $('.project-cards').eq(i-1).removeClass('display-none')
+}
+
+const hideCards = () => {
+    $('.project-cards').addClass('display-none')
+    translateReturn()
+}
+
+/////////////////
+// EVENT HANDLERS 
+/////////////////
+$navButton.on('click', () => {
+    navToggle()
+    hideCards()
+})
+
 $(window).on('click', (e) => {
-    // console.log($(e.target).attr('id'))
-    if ($(e.target).attr('id') === 'nav-button' || e.target.className == undefined) {
+    console.log($(e.target).attr('id'))
+    if ($(e.target).attr('id') === 'nav-button' || $(e.target).attr('id') == undefined || $(e.target).attr('id') === 'logo') {
         translateReturn()
-        navHide()
         navItemRemove()
+        hideCards()
     };
 })
 
+
 $aboutMeButton.on('click', aboutMe)
 $contactFormButton.on('click', contactForm)
+
+
+$proj1.on('click', () => {
+    showCards(1)
+})
+
+$proj2.on('click', () => {
+    showCards(2)
+})
+
+$proj3.on('click', () => {
+    showCards(3)
+})
+
+$proj4.on('click', () => {
+    showCards(4)
+})
+
+$proj5.on('click', () => {
+    showCards(5)
+})
+
+$proj6.on('click', () => {
+    showCards(6)
+})
+
+$proj7.on('click', () => {
+    showCards(7)
+})
+

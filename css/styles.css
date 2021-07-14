@@ -55,9 +55,20 @@ button, div {
     color: grey;
 }
 
+.show-nav-elements {
+    transform: rotateX(0deg)
+}
+
+.hide-nav-elements {
+    transform: rotateX(-135deg)
+}
+
 #proj-1 {
     grid-area: 1 / 1 / 2 / 2;
-    background: teal;
+    /* background-image: url("https://res.cloudinary.com/scwd/image/upload/ar_1:1,c_fill,e_art:hokusai,g_auto,h_500,w_500/v1626185960/Portfolio%20Placeholders/al-aqsa-1233827_v1epx1.jpg"); */
+    /* background-size: cover; */
+    /* background: teal; */
+    
 }
 
 #proj-2 {
@@ -91,14 +102,16 @@ button, div {
     
 }
 
+.display-none {
+    display: none;
+}
+
 .nav-elements {
     margin: 0;
     padding: 0;
     transform-origin: top;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform: rotateX(-135deg)
-    
+    backface-visibility: hidden;    
 }
 
 .nav-elements#about-me-button {
@@ -112,6 +125,10 @@ button, div {
 
 .nav-elements#socials-button {
     grid-area: 5 / 2 / 6 / 3;
+}
+
+.project-cards {
+    grid-area: 1 / 1 / 6 / 4;
 }
 
 #about-me-header {

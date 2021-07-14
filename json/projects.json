@@ -1,10 +1,58 @@
 [
     {
-      "name": "example1",
-      "description":"example1",
-      "github": "http://...",
-      "deployed": "http://...",
-      "thumbnail": "http://...",
-      "image": "http://..."
+      "name": "Placeholder 1",
+      "description":"This card is a placeholder until such a time as I actually do something cool ;P",
+      "github": "",
+      "deployed": "https://res.cloudinary.com/scwd/image/upload/v1626185960/Portfolio%20Placeholders/al-aqsa-1233827_v1epx1.jpg",
+      "tile": "https://res.cloudinary.com/scwd/image/upload/ar_1:1,c_fill,e_art:hokusai,g_auto,h_500,w_500/v1626185960/Portfolio%20Placeholders/al-aqsa-1233827_v1epx1.jpg",
+      "card": "https://res.cloudinary.com/scwd/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1626185960/Portfolio%20Placeholders/al-aqsa-1233827_v1epx1.jpg"
+    },
+    {
+      "name": "Placeholder 2",
+      "description":"This card is a placeholder until such a time as I actually do something cool ;P",
+      "github": "",
+      "deployed": "https://res.cloudinary.com/scwd/image/upload/v1626185734/Portfolio%20Placeholders/coffee-6371149_Small_fexd9b.jpg",
+      "tile": "https://res.cloudinary.com/scwd/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1626185734/Portfolio%20Placeholders/coffee-6371149_Small_fexd9b.jpg",
+      "card": "https://res.cloudinary.com/scwd/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1626185734/Portfolio%20Placeholders/coffee-6371149_Small_fexd9b.jpg"
+    },
+    {
+      "name": "Placeholder 3",
+      "description":"This card is a placeholder until such a time as I actually do something cool ;P",
+      "github": "",
+      "deployed": "",
+      "tile": "",
+      "card": ""
+    },
+    {
+      "name": "Placeholder 4",
+      "description":"This card is a placeholder until such a time as I actually do something cool ;P",
+      "github": "",
+      "deployed": "",
+      "tile": "",
+      "card": ""
+    },
+    {
+      "name": "Placeholder 5",
+      "description":"This card is a placeholder until such a time as I actually do something cool ;P",
+      "github": "",
+      "deployed": "",
+      "tile": "",
+      "card": ""
+    },
+    {
+      "name": "Placeholder 6",
+      "description":"This card is a placeholder until such a time as I actually do something cool ;P",
+      "github": "",
+      "deployed": "",
+      "tile": "",
+      "card": ""
+    },
+    {
+      "name": "Placeholder 7",
+      "description":"This card is a placeholder until such a time as I actually do something cool ;P",
+      "github": "",
+      "deployed": "",
+      "tile": "",
+      "card": ""
     }
   ]
