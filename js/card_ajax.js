@@ -17,7 +17,7 @@ $.ajax('./json/projects.json')
         $('<article>').addClass('project-cards display-none').attr('id',`card-${(i+1)}`).css({
             'background-image': `url(${data[i].card})`,
             'background-size': 'cover'
-        }).html(`<div>${data[i].description}</div>`).appendTo($main)
+        }).html(`<h3>${data[i].name}</h3><p>${data[i].description}</p><a href="${data[i].deployed}"><button>Check it out!</button></a>`).appendTo($main)
    })
    
 

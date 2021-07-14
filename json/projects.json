@@ -1,6 +1,6 @@
 [
     {
-      "name": "Placeholder 1",
+      "name": "Al-Aqsa:<br/>The Dome of the Rock",
       "description":"This card is a placeholder until such a time as I actually do something cool ;P",
       "github": "",
       "deployed": "https://res.cloudinary.com/scwd/image/upload/v1626185960/Portfolio%20Placeholders/al-aqsa-1233827_v1epx1.jpg",
@@ -8,7 +8,7 @@
       "card": "https://res.cloudinary.com/scwd/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1626185960/Portfolio%20Placeholders/al-aqsa-1233827_v1epx1.jpg"
     },
     {
-      "name": "Placeholder 2",
+      "name": "Espresso.<br/><br/>You know.",
       "description":"This card is a placeholder until such a time as I actually do something cool ;P",
       "github": "",
       "deployed": "https://res.cloudinary.com/scwd/image/upload/v1626185734/Portfolio%20Placeholders/coffee-6371149_Small_fexd9b.jpg",
@@ -16,43 +16,43 @@
       "card": "https://res.cloudinary.com/scwd/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1626185734/Portfolio%20Placeholders/coffee-6371149_Small_fexd9b.jpg"
     },
     {
-      "name": "Placeholder 3",
+      "name": "A Lighthouse, wow.",
       "description":"This card is a placeholder until such a time as I actually do something cool ;P",
       "github": "",
-      "deployed": "",
-      "tile": "",
-      "card": ""
+      "deployed": "https://res.cloudinary.com/scwd/image/upload/v1626185577/Portfolio%20Placeholders/lighthouse-6365680_esoigs.jpg",
+      "tile": "https://res.cloudinary.com/scwd/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1626185577/Portfolio%20Placeholders/lighthouse-6365680_esoigs.jpg",
+      "card": "https://res.cloudinary.com/scwd/image/upload/v1626185577/Portfolio%20Placeholders/lighthouse-6365680_esoigs.jpg"
     },
     {
-      "name": "Placeholder 4",
+      "name": "SQUIRREL",
       "description":"This card is a placeholder until such a time as I actually do something cool ;P",
       "github": "",
-      "deployed": "",
-      "tile": "",
-      "card": ""
+      "deployed": "https://res.cloudinary.com/scwd/image/upload/v1626185575/Portfolio%20Placeholders/squirrel-6396194_l83mmn.jpg",
+      "tile": "https://res.cloudinary.com/scwd/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1626185575/Portfolio%20Placeholders/squirrel-6396194_l83mmn.jpg",
+      "card": "https://res.cloudinary.com/scwd/image/upload/v1626185575/Portfolio%20Placeholders/squirrel-6396194_l83mmn.jpg"
     },
     {
-      "name": "Placeholder 5",
+      "name": "Daisies, right?",
       "description":"This card is a placeholder until such a time as I actually do something cool ;P",
       "github": "",
-      "deployed": "",
-      "tile": "",
-      "card": ""
+      "deployed": "https://res.cloudinary.com/scwd/image/upload/v1626185574/Portfolio%20Placeholders/jackie-matthews-photography-6079016_lxbmdj.jpg",
+      "tile": "https://res.cloudinary.com/scwd/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1626185574/Portfolio%20Placeholders/jackie-matthews-photography-6079016_lxbmdj.jpg",
+      "card": "https://res.cloudinary.com/scwd/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1626185574/Portfolio%20Placeholders/jackie-matthews-photography-6079016_lxbmdj.jpg"
     },
     {
-      "name": "Placeholder 6",
+      "name": "Mood",
       "description":"This card is a placeholder until such a time as I actually do something cool ;P",
       "github": "",
-      "deployed": "",
-      "tile": "",
-      "card": ""
+      "deployed": "https://res.cloudinary.com/scwd/image/upload/v1626185574/Portfolio%20Placeholders/cat-2934720_xj3mts.jpg",
+      "tile": "https://res.cloudinary.com/scwd/image/upload/v1626185574/Portfolio%20Placeholders/cat-2934720_xj3mts.jpg",
+      "card": "https://res.cloudinary.com/scwd/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1626185574/Portfolio%20Placeholders/cat-2934720_xj3mts.jpg"
     },
     {
-      "name": "Placeholder 7",
+      "name": "No Chocolate",
       "description":"This card is a placeholder until such a time as I actually do something cool ;P",
       "github": "",
-      "deployed": "",
-      "tile": "",
-      "card": ""
+      "deployed": "https://res.cloudinary.com/scwd/image/upload/v1626185559/Portfolio%20Placeholders/ice-cream-6395523_kwx4ri.jpg",
+      "tile": "https://res.cloudinary.com/scwd/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1626185559/Portfolio%20Placeholders/ice-cream-6395523_kwx4ri.jpg",
+      "card": "https://res.cloudinary.com/scwd/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1626185559/Portfolio%20Placeholders/ice-cream-6395523_kwx4ri.jpg"
     }
   ]

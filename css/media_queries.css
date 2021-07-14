@@ -22,7 +22,7 @@
 
     #nav-button {
         grid-area: 1 / 3 / 2 / 4;
-        /* display: none; */
+        display: none;
     }
 
     #proj-1 {
@@ -128,7 +128,6 @@
     }
     /* don't love the important in this block. needs work */
     .translate-nav-about, .translate-nav-contact {
-        display: block !important;
         transform: translateY(0);    
     }
 
