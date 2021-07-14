@@ -19,7 +19,7 @@ $.ajax('./json/projects.json')
             'background-color': 'darkslategray',
             'background-size': 'cover',
             'z-index': '2'
-        }).html(`<h3>${data[i].name}</h3><p>${data[i].description}</p><a href="${data[i].deployed}"><button>Check it out!</button></a>`).appendTo($main)
+        }).html(`<h3>${data[i].name}</h3><p>${data[i].description}</p><a href="${data[i].deployed}" target="_blank" rel="noopener noreferrer">Check it out!</a>`).appendTo($main)
    })
    
 

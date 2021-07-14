@@ -53,7 +53,7 @@ main .tiles {
                 inset -1vh 0 1vh  rgba(0,0,0,.2), /*right*/
                 inset 0 1vh 1vh  rgba(0,0,0,.2), /*top*/
                 inset 0 -1vh 1vh  rgba(0,0,0,.2); /*bottom*/
-    border-radius: calc(0.05*(var(--tile)));               
+    border-radius: calc(0.05*(var(--tile)));
 }
 
 .tiles:active:not(#social-buttons-container) {
@@ -353,26 +353,42 @@ article.project-cards {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: stretch;
     border-radius: calc(0.1*(var(--tile)));
     box-shadow: inset 20px 50px 100px 0 black,
                 inset -20px -50px 100px 0 black;
-    text-shadow: 0 0 5px rgba(255,255,255,1);
-    text-align: center;
+    text-shadow: 0 0 5px rgba(255,255,255,.5);
     padding: calc(0.25*(var(--tile)));
 }   
 
+article.project-cards h3, article.project-cards p {
+    background: #efefef25;
+    margin: 0;
+    padding: 0;
+}
+
 article.project-cards h3 {
+    border-radius: 2vh 2vh 0 0;
     font-size: calc(0.2*(var(--tile)));
+    text-align: center;
 }
 
 article.project-cards p {
+    border-radius: 0 0 2vh 2vh;
     font-size: calc(0.12*(var(--tile)));
     flex-grow: 2;
+    padding: 1em 3em;
 }
 
-article.project-cards a, article.project-cards a button {
-    display: inline;
+article.project-cards a {
     font-size: calc(0.15*(var(--tile)));
-    height: calc(0.3*(var(--tile)));;
-    max-width: 100%
+    max-width: fit-content;
+    padding: calc(0.075*(var(--tile)));
+    margin: calc(0.075*(var(--tile))) auto;
+    background: #efefef;
+    border-radius: calc(0.05*(var(--tile)));
+    color: black;
+    text-decoration: none;
+
+
 }
