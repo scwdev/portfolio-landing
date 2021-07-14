@@ -1,9 +1,11 @@
 :root {
-    --tile: calc(((90vh)/6))
+    --tile: calc(((95vh)/6))
 }
 
 * {
     transition-duration: 400ms;
+    font-family: 'Roboto', sans-serif;
+    /* text-transform: lowercase; */
 }
 
 body {
@@ -12,6 +14,7 @@ body {
     /* text-align: center; */
     display: flex;
     justify-content: center;
+    /* background: lightslategray; */
 }
 
 main {
@@ -34,11 +37,13 @@ main {
     align-items: center;
     background-color: none;
     box-shadow: none;
+    font-family: 'Spartan', sans-serif;
 }
 
 #logo-s {
     display: inline-block;
     font-size: calc(0.28*(var(--tile)));
+    font-family: 'Spartan', sans-serif;
 }
 
 main .tiles {
