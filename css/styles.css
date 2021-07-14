@@ -3,7 +3,7 @@
 }
 
 * {
-    transition-duration: 400ms;
+    transition-duration: 250ms;
     font-family: 'Roboto', sans-serif;
     /* text-transform: lowercase; */
 }
@@ -48,8 +48,10 @@ main {
 
 main .tiles {
     text-align: center;
-    box-shadow: inset 20px 20px 25px  rgba(255,255,255,.3),
-                inset -20px -20px 25px  rgba(0,0,0,.2);
+    box-shadow: inset 1vh 0 1vh  rgba(0,0,0,.2), /*left*/
+                inset -1vh 0 1vh  rgba(0,0,0,.2), /*right*/
+                inset 0 1vh 1vh  rgba(0,0,0,.2), /*top*/
+                inset 0 -1vh 1vh  rgba(0,0,0,.2); /*bottom*/
     border-radius: calc(0.05*(var(--tile)));               
 }
 
@@ -74,6 +76,42 @@ button {
     grid-area: 6 / 3 / 7 / 4;
     font-size: calc(0.5*(var(--tile)));
     color: grey;
+}
+
+#social-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#social-buttons-container > a{
+    max-width: 100%;
+    align-self: center;
+}
+
+.social-buttons {
+    background: none;
+    padding: .2em;
+    font-size: xx-large;
+    color: black;
+    
+}
+
+#linkedin-icon, #github-icon {
+    border-radius: 1em;
+
+}
+
+#linkedin-icon:active, #github-icon:active {
+    transition-duration: .1s;
+    box-shadow: inset .1em 0 .1em rgba(0,0,0,.2),
+    inset -.1em 0 .1em rgba(0,0,0,.2),
+    inset 0 .1em .1em rgba(0,0,0,.2),
+    inset 0 -.1em .1em rgba(0,0,0,.2);
+}
+
+#linkedin-icon {
+    color: #0c66c2;
 }
 
 .show-nav-elements {
@@ -144,7 +182,7 @@ button {
     grid-area: 5 / 3 / 6 / 4;
 }
 
-.nav-elements#socials-button {
+.nav-elements#social-buttons-container {
     grid-area: 5 / 2 / 6 / 3;
 }
 
@@ -164,25 +202,36 @@ button {
 
 #contact-form {
     grid-area: 5 / 1 / 7 / 4;
+    align-self: stretch;
     /* text-align: center; */
+}
+
+#fs-frm {
+    height: 100%;
 }
 
 fieldset#fs-frm-inputs {
     display: grid;
-    grid-template: repeat(2, 1.5em) 1fr 1fr / 1fr 2fr;
-    margin: 0 auto;
-    height: calc((1.9*(var(--tile))));
-    padding: 0 5%;
+    grid-template: repeat(3, 1.5em) 1fr 3em 1fr / 1fr 2fr;
+    align-content: stretch;
+    height: 100%;
+    padding: 2% 5%;
+    border: none;
 }
 
-/* #full-name, #email-address, #message {
+#full-name, #email-address, #message {
     display: inline-block;
     margin: 0 auto;
     width: 90%;
-} */
+}
+
+#contact-form-submit-button {
+    grid-area: 5 / 1 / 6 / 2 ;
+}
 
 #message {
-    grid-area: 3 / 2 / 5 / 3;
+    grid-area: 3 / 2 / 7 / 3;
+    
 }
 
 
@@ -222,6 +271,13 @@ fieldset#fs-frm-inputs {
     transform: translateY(calc(-1*(var(--tile))));
 }
 
+.translate-proj-1-cards, .translate-proj-2-cards, .translate-proj-3-cards, .translate-proj-4-cards, .translate-proj-5-cards, .translate-proj-6-cards, .translate-proj-7-cards {
+    display: none
+}
+
+.translate-logo-cards {
+    transform: translateY(calc(4*(var(--tile))));
+}
 
 /* -------------------------------------------- */
         /* Contact Form Moves */

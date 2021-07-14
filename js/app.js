@@ -14,12 +14,13 @@ const $contactForm = $('<div>').addClass('nav-item').attr('id', 'contact-form').
             <label for="message">Message</label>
             <textarea  name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
             <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-            <input type="submit" value="Submit">
+            <input id='contact-form-submit-button' type="submit" value="Submit">
         </fieldset>
     </form>`)
 
 
 const navShow = () => {
+
     $navElements.removeClass('hide-nav-elements')
     $navElements.addClass('show-nav-elements')
 }
@@ -29,8 +30,13 @@ const navHide = () => {
 }
 navHide()
 
+
+
 const navToggle = () => {
-    if ($navElements.hasClass('show-nav-elements')) {
+    if ($('article').not('.display-none').length !== 0) {
+
+    }
+    else if ($navElements.hasClass('show-nav-elements')) {
         navHide()
     } else {
         navShow()
@@ -138,7 +144,7 @@ $navButton.on('click', () => {
 })
 
 $(window).on('click', (e) => {
-    console.log($(e.target).attr('id'))
+    // console.log($(e.target).attr('id'))
     if ($(e.target).attr('id') === 'nav-button' || $(e.target).attr('id') == undefined || $(e.target).attr('id') === 'logo') {
         translateReturn()
         navItemRemove()
