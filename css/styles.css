@@ -24,6 +24,21 @@ main {
     
 }
 
+#logo {
+    display: flex;
+    font-size: calc(0.24*(var(--tile)));
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    box-shadow: none;
+}
+
+#logo-s {
+    display: inline-block;
+    font-size: calc(0.28*(var(--tile)));
+}
+
 main .tiles {
     text-align: center;
     box-shadow: inset 20px 20px 25px  rgba(255,255,255,.3),
@@ -40,7 +55,7 @@ main .tiles {
                 inset -25px -25px 25px  rgba(255,255,255,.2) */
 }
 
-button, div {
+button {
     background: whitesmoke;
     border: none;
 }
