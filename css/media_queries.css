@@ -7,7 +7,9 @@
 
 @media screen and (min-width: 1024px) {
     :root {
-        --tile: calc(((95vh)/5))
+        --tile: 15vh;
+        --gap: 5vh;
+        --translate: 20vh;
     }
         
     main {
@@ -84,19 +86,19 @@
 
 
     .translate-about-me-button-about {
-        transform: translateY(calc(-3*(var(--tile))));    
+        transform: translateY(calc(-3*(var(--translate))));    
     }
 
     .translate-contact-form-button-about {
-        transform: translateX(calc(-1*(var(--tile))));    
+        transform: translateX(calc(-1*(var(--translate))));    
     }
 
     .translate-socials-button-about {
-        transform: translateX(calc(-1*(var(--tile))));    
+        transform: translateX(calc(-1*(var(--translate))));    
     }
 
     .translate-about-me-button-contact {
-        transform: translateY(calc((var(--tile))));    
+        transform: translateY(calc((var(--translate))));    
     }
 
     .translate-contact-form-button-contact {
@@ -112,19 +114,19 @@
     }
 
     .translate-about-me-button-cards {
-        transform: translateX(calc(-2*(var(--tile))));    
+        transform: translateX(calc(-2*(var(--translate))));    
     }
 
     .translate-contact-form-button-cards {
-        transform: translateX(calc(-1*(var(--tile))));    
+        transform: translateX(calc(-1*(var(--translate))));    
     }
 
     .translate-socials-button-cards {
-
+        transform: translateX(calc(-1*(var(--translate))));    
     }
 
     .translate-logo-cards {
-        transform: translateY(calc(-1*(var(--tile))));    
+        transform: translateY(calc(-1*(var(--translate))));    
     }
     /* don't love the important in this block. needs work */
     .translate-nav-about, .translate-nav-contact {
@@ -142,12 +144,12 @@
 
     .translate-proj-2-cards {
         opacity: 1;
-        transform: translateX(calc((var(--tile))));    
+        transform: translateX(calc((var(--translate))));    
     }
 
     .translate-proj-3-about, .translate-proj-3-contact, .translate-proj-3-cards {
         opacity: 1;
-        transform: translateX(calc(-1*(var(--tile))));    
+        transform: translateX(calc(-1*(var(--translate))));    
     }
 
     .translate-proj-4-about, .translate-proj-4-contact, .translate-proj-4-cards {
@@ -157,26 +159,26 @@
 
     .translate-proj-5-about, .translate-proj-5-contact, .translate-proj-5-cards {
         opacity: 1;
-        transform: translateX(calc(-1*(var(--tile))));
+        transform: translateX(calc(-1*(var(--translate))));
     }
 
     .translate-proj-5-cards {
         opacity: 1;
-        transform: translateY(calc(-3*(var(--tile))));
+        transform: translateY(calc(-3*(var(--translate))));
     }    
 
     .translate-proj-6-about, .translate-proj-6-contact, .translate-proj-6-cards {
         opacity: 1;
-        transform: translateX(calc((var(--tile))));    
+        transform: translateX(calc((var(--translate))));    
     }
 
     .translate-proj-7-about, .translate-proj-7-cards {
         opacity: 1;
-        transform: translateX(calc(2*(var(--tile))));
+        transform: translateX(calc(2*(var(--translate))));
     }
 
     .translate-proj-7-contact {
-        transform: translateX(calc(var(--tile)));    
+        transform: translateX(calc(var(--translate)));    
     }
 
     #about-me-div {

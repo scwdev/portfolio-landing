@@ -189,4 +189,3 @@ $proj6.on('click', () => {
 $proj7.on('click', () => {
     showCards(7)
 })
-

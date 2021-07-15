@@ -1,9 +1,11 @@
 :root {
-    --tile: calc(((95vh)/6))
+    --tile: 15vh;
+    --gap: 1vh;
+    --translate: 16vh;
 }
 
 * {
-    transition-duration: 250ms;
+    transition-duration: 500ms;
     font-family: 'Roboto', sans-serif;
     /* text-transform: lowercase; */
 }
@@ -12,7 +14,10 @@ body {
     /* margin: 0 auto;     */
     /* justify-items: center; */
     /* text-align: center; */
-    /* background: linear-gradient(to right ,black, rgb(85, 85, 85), white, rgb(85, 85, 85), black); */
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='.5' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cuse fill='%23fafafa' href='%23s' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='2'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23e5e5e5'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23e0e0e0'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     transform-origin: top;
@@ -24,7 +29,7 @@ main {
     -webkit-perspective: calc(3*(var(--tile)));
     perspective: calc(3*(var(--tile)));
     grid-template: repeat(6, var(--tile)) / repeat(3, var(--tile));
-    gap: 4px;
+    gap: var(--gap);
     /* gap: calc(0.03*(var(--tile))); */
     /* text-align: center; */
     /* padding: 0; */
@@ -52,42 +57,37 @@ main {
 main .tiles {
     text-align: center;
     font-size: calc(.14*(var(--tile)));
-    font-weight: bold;
+    font-weight: 400;
+    background: none;
     text-shadow: 0 0 .2em rgba(255, 255, 255, 0.75);
     padding: 1em;
     box-shadow: 1px 1px 4px 1px black,
                 inset 1vh 0 1vh  rgba(255,255,255,.7),      /*left*/
                 inset -1vh 0 1vh  rgba(0,0,0,.5),           /*right*/
                 inset 0 1vh 1vh  rgba(255,255,255,.7),      /*top*/
-                inset 0 -1vh 1vh  rgba(0,0,0,.5),           /*bottom*/
+                inset 0 -1vh 1vh  rgba(0,0,0,.5);           /*bottom*/
                 /* ---------------deep----------------- */
-                inset 3vh 0 3vh  rgba(255,255,255,.5),      /*left*/
-                inset -3vh 0 3vh  rgba(0,0,0,.2),           /*right*/
-                inset 0 3vh 3vh  rgba(255,255,255,.5),      /*top*/
-                inset 0 -3vh 3vh  rgba(0,0,0,.2);           /*bottom*/
-    border-radius: calc(0.05*(var(--tile)));
+                
+    border-radius: calc(0.02*(var(--tile)));
+    opacity: 70%;
+    filter:contrast(120%) saturate(110%);
+    /* border-right: 5px outset rgba(255, 255, 255, 0.534);
+    border-bottom: 5px outset rgba(255, 255, 255, 0.534); */
 }
 
 .tiles:hover {
-    filter: brightness(110%) saturate(110%);
+    opacity: 100%;
+    filter: brightness(100%) contrast(120%) saturate(110%);
+    font-weight: 900;
 }
 
 .tiles:active:not(#social-buttons-container, #logo) {
     transition-duration: 200ms;
-    box-shadow: inset .5vh 0vh .7vh  rgba(0, 0, 0, .5),      /*left*/
-                inset -1vh 0 .7vh   rgba(0, 0, 0, .7),           /*right*/
-                inset 0 .5vh .7vh   rgba(0, 0, 0, .5),      /*top*/
-                inset 0 -1vh .7vh  rgba(0,0,0,.7),           /*bottom*/
-
-                inset 1vh 0 2vh  rgba(255,255,255,.7),      /*left*/
-                inset -1vh 0 2vh  rgba(0,0,0, .5),           /*right*/
-                inset 0 1vh 2vh  rgba(255,255,255, .7),      /*top*/
-                inset 0 -1vh 2vh  rgba(0,0,0, .5),           /*bottom*/
-                /* ---------------deep----------------- */
-                inset 2vh 0 3vh  rgba(255,255,255,.5),      /*left*/
-                inset -2vh 0 3vh  rgba(0,0,0,.4),           /*right*/
-                inset 0 2vh 3vh  rgba(255,255,255,.5),      /*top*/
-                inset 0 -2vh 3vh  rgba(0,0,0,.4);         /*bottom*/
+    box-shadow: .5px .5px 2px 1px black,
+    inset 1vh 0 1vh  rgba(255,255,255,.7),      /*left*/
+    inset -1vh 0 1vh  rgba(0,0,0,.5),           /*right*/
+    inset 0 1vh 1vh  rgba(255,255,255,.7),      /*top*/
+    inset 0 -1vh 1vh  rgba(0,0,0,.5);           /*bottom*/
     filter: brightness(105%) saturate(100%);
 
  
@@ -104,9 +104,14 @@ button {
 }
 
 #nav-button {
+    height: var(--tile);
     grid-area: 6 / 3 / 7 / 4;
+    align-self: center;
+    text-align: center;
     font-size: calc(0.5*(var(--tile)));
+    padding: 0;
     color: grey;
+    font-weight: 900;
 }
 
 #social-buttons-container {
@@ -214,6 +219,7 @@ button {
 
 .project-cards {
     grid-area: 1 / 1 / 6 / 4;
+    margin: 1vh;
 }
 
 #about-me-div {
@@ -301,7 +307,7 @@ fieldset#fs-frm-inputs {
 /* -------------------------------------------- */
 
 .translate-nav-about {
-    transform: translateY(calc(-3*(var(--tile))));    
+    transform: translateY(calc(-3*(var(--translate))));    
 }
 
 .translate-proj-1-about {
@@ -309,27 +315,27 @@ fieldset#fs-frm-inputs {
 }
 
 .translate-proj-2-about {
-    transform: translateY(calc(-1*(var(--tile))));
+    transform: translateY(calc(-1*(var(--translate))));
 }
 
 .translate-proj-3-about {
-    transform: translateY(calc(-2*(var(--tile))));    
+    transform: translateY(calc(-2*(var(--translate))));    
 }
 
 .translate-proj-4-about {
-    transform: translateY(calc(-1*(var(--tile))));
+    transform: translateY(calc(-1*(var(--translate))));
 }
 
 .translate-proj-5-about {
-    transform: translateY(calc(-1*(var(--tile))));
+    transform: translateY(calc(-1*(var(--translate))));
 }
 
 .translate-proj-6-about {
-    transform: translateY(calc(-2*(var(--tile))));    
+    transform: translateY(calc(-2*(var(--translate))));    
 }
 
 .translate-proj-7-about {
-    transform: translateY(calc(-1*(var(--tile))));
+    transform: translateY(calc(-1*(var(--translate))));
 }
 
 .translate-proj-1-cards, .translate-proj-2-cards, .translate-proj-3-cards, .translate-proj-4-cards, .translate-proj-5-cards, .translate-proj-6-cards, .translate-proj-7-cards {
@@ -339,7 +345,7 @@ fieldset#fs-frm-inputs {
 }
 
 .translate-logo-cards {
-    transform: translateY(calc(4*(var(--tile))));
+    transform: translateY(calc(4*(var(--translate))));
 }
 
 /* -------------------------------------------- */
@@ -347,7 +353,7 @@ fieldset#fs-frm-inputs {
 /* -------------------------------------------- */
 
 .translate-nav-contact {
-    transform: translateY(calc(-2*(var(--tile))));    
+    transform: translateY(calc(-2*(var(--translate))));    
 }
 
 .translate-proj-1-contact {
@@ -363,7 +369,7 @@ fieldset#fs-frm-inputs {
 }
 
 .translate-proj-4-contact {
-    transform: translateY(calc(-1*(var(--tile))));
+    transform: translateY(calc(-1*(var(--translate))));
 }
 
 .translate-proj-5-contact {
@@ -371,11 +377,11 @@ fieldset#fs-frm-inputs {
 }
 
 .translate-proj-6-contact {
-    transform: translateY(calc(-1*(var(--tile))));    
+    transform: translateY(calc(-1*(var(--translate))));    
 }
 
 .translate-proj-7-contact {
-    transform: translateY(calc(-1*(var(--tile))));
+    transform: translateY(calc(-1*(var(--translate))));
 }
 
 article.project-cards {
