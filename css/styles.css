@@ -5,7 +5,8 @@
 }
 
 * {
-    transition-duration: 500ms;
+    transition-duration: .15s, 1s;
+    transition-property: all, transform;
     font-family: 'Roboto', sans-serif;
     /* text-transform: lowercase; */
 }
@@ -53,17 +54,18 @@ main {
 
 #logo-s {
     display: inline-block;
-    font-size: calc(0.28*(var(--tile)));
+    font-size: calc(0.32*(var(--tile)));
     font-family: 'Spartan', sans-serif;
 }
 
 main .tiles {
+    /* transition-duration: .15s; */
     text-align: center;
     font-size: calc(.14*(var(--tile)));
     font-weight: 400;
     background: none;
     text-shadow: 0 0 .2em rgba(255, 255, 255, 0.75);
-    padding: 1em;
+    /* padding: 1em; */
     box-shadow: 1px 1px 4px 1px black,
                 inset 1vh 0 1vh  rgba(255,255,255,.7),      /*left*/
                 inset -1vh 0 1vh  rgba(0,0,0,.5),           /*right*/
@@ -79,6 +81,7 @@ main .tiles {
 }
 
 .tiles:hover {
+    /* transition-duration: .15s; */
     opacity: 100%;
     filter: brightness(100%) contrast(120%) saturate(110%);
     font-weight: 900;
@@ -89,13 +92,13 @@ main .tiles {
 }
 
 .tiles:active:not(#social-buttons-container, #logo) {
-    transition-duration: 200ms;
+    /* transition-duration: 200ms; */
     box-shadow: .5px .5px 2px 1px black,
     inset 1vh 0 1vh  rgba(255,255,255,.7),      /*left*/
     inset -1vh 0 1vh  rgba(0,0,0,.5),           /*right*/
     inset 0 1vh 1vh  rgba(255,255,255,.7),      /*top*/
     inset 0 -1vh 1vh  rgba(0,0,0,.5);           /*bottom*/
-    filter: brightness(105%) saturate(100%);
+    
 }
 
 button {
@@ -135,7 +138,7 @@ button {
 }
 
 .social-buttons:active {
-    transition-duration: .1s;
+    /* transition-duration: .1s; */
     box-shadow: inset .1em 0 .1em rgba(0,0,0,.2),
     inset -.1em 0 .1em rgba(0,0,0,.2),
     inset 0 .1em .1em rgba(0,0,0,.2),
@@ -245,7 +248,8 @@ button {
 
 #about-me-article p {
     margin-top: calc(var(--tile));
-    padding: .8em
+    padding: .8em;
+    text-align: justify;
 }
 
 #portrait {
@@ -399,20 +403,24 @@ article.project-cards {
 }   
 
 article.project-cards h3, article.project-cards p {
-    background: #efefef25;
+    /* background: #efefef25; */
+    background: linear-gradient(to right, rgba(255, 255, 255, .1), rgba(255, 255, 255, .35), rgba(255, 255, 255, .35), rgba(255, 255, 255, .1));
     margin: 0;
-    padding: 0;
+    padding: 1em;
 }
 
 article.project-cards h3 {
     border-radius: 2vh 2vh 0 0;
+    padding-bottom: 0;
     font-size: calc(0.2*(var(--tile)));
     text-align: center;
 }
 
 article.project-cards p {
     border-radius: 0 0 2vh 2vh;
-    font-size: calc(0.12*(var(--tile)));
+    font-size: calc(0.15*(var(--tile)));
+    text-align: justify;
+    text-justify: auto;
     flex-grow: 2;
     padding: 1em 3em;
 }
