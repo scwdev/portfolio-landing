@@ -15,6 +15,7 @@ body {
     /* background: linear-gradient(to right ,black, rgb(85, 85, 85), white, rgb(85, 85, 85), black); */
     display: flex;
     justify-content: center;
+    transform-origin: top;
     /* background: lightslategray; */
 }
 
@@ -49,20 +50,47 @@ main {
 
 main .tiles {
     text-align: center;
-    box-shadow: inset 1vh 0 1vh  rgba(0,0,0,.2), /*left*/
-                inset -1vh 0 1vh  rgba(0,0,0,.2), /*right*/
-                inset 0 1vh 1vh  rgba(0,0,0,.2), /*top*/
-                inset 0 -1vh 1vh  rgba(0,0,0,.2); /*bottom*/
+    font-size: calc(.14*(var(--tile)));
+    font-weight: bold;
+    text-shadow: 0 0 .2em rgba(255, 255, 255, 0.75);
+    padding: 1em;
+    box-shadow: inset 1vh 0 1vh  rgba(255,255,255,.7),      /*left*/
+                inset -1vh 0 1vh  rgba(0,0,0,.5),           /*right*/
+                inset 0 1vh 1vh  rgba(255,255,255,.7),      /*top*/
+                inset 0 -1vh 1vh  rgba(0,0,0,.5),           /*bottom*/
+                /* ---------------deep----------------- */
+                inset 3vh 0 3vh  rgba(255,255,255,.5),      /*left*/
+                inset -3vh 0 3vh  rgba(0,0,0,.2),           /*right*/
+                inset 0 3vh 3vh  rgba(255,255,255,.5),      /*top*/
+                inset 0 -3vh 3vh  rgba(0,0,0,.2);           /*bottom*/
     border-radius: calc(0.05*(var(--tile)));
 }
 
+.tiles:hover {
+    filter: brightness(110%) saturate(110%);
+}
+
 .tiles:active:not(#social-buttons-container) {
-    box-shadow: inset 25px 25px 25px  rgba(255,255,255,.2),
-                inset -25px -25px 25px  rgba(0,0,0,.1),
-                inset 5px 5px 10px  rgba(0,0,0,.5),
-                inset -10px -10px 15px  rgba(0,0,0,.2)
-    /* box-shadow: inset 25px 25px 25px  rgba(0,0,0,.1),
-                inset -25px -25px 25px  rgba(255,255,255,.2) */
+    transition-duration: 200ms;
+    box-shadow: inset .5vh 0vh .7vh  rgba(0, 0, 0, .5),      /*left*/
+                inset -1vh 0 .7vh   rgba(0, 0, 0, .7),           /*right*/
+                inset 0 .5vh .7vh   rgba(0, 0, 0, .5),      /*top*/
+                inset 0 -1vh .7vh  rgba(0,0,0,.7),           /*bottom*/
+
+                inset 1vh 0 2vh  rgba(255,255,255,.7),      /*left*/
+                inset -1vh 0 2vh  rgba(0,0,0, .5),           /*right*/
+                inset 0 1vh 2vh  rgba(255,255,255, .7),      /*top*/
+                inset 0 -1vh 2vh  rgba(0,0,0, .5),           /*bottom*/
+                /* ---------------deep----------------- */
+                inset 2vh 0 3vh  rgba(255,255,255,.5),      /*left*/
+                inset -2vh 0 3vh  rgba(0,0,0,.4),           /*right*/
+                inset 0 2vh 3vh  rgba(255,255,255,.5),      /*top*/
+                inset 0 -2vh 3vh  rgba(0,0,0,.4);         /*bottom*/
+    filter: brightness(105%) saturate(100%);
+
+ 
+                
+                
 }
 
 button {
@@ -164,7 +192,7 @@ button {
 .nav-elements {
     margin: 0;
     padding: 0;
-    transform-origin: top;
+    transform-origin: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;    
 }
