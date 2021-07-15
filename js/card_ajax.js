@@ -20,7 +20,6 @@ function shuffle(array) {
 // array of the projects I want up.
 var array = [0,1,2,3,4,5,6]
 shuffle(array)
-console.log(array)
 
 // AJAX JSON REQUEST
 $.ajax('./json/projects.json')
@@ -43,4 +42,4 @@ $.ajax('./json/projects.json')
     })
 })
 //WHAT IF IT DOESN'T WORK HUMAN?
-.catch((error) => {console.log(error)})
+.catch((error) => {console.log('error')})
