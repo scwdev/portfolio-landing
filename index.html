@@ -60,54 +60,33 @@
                 </div>
             </div>
 
-            <!-- <div class="carousel-item">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                </div>
-            </div> -->
-            
         </div>
 
         <!-- about -->
         <div class="d-flex align-items-center h-100">
-            <article class="m-auto w-75">
+            <article class="mx-auto w-75">
+                <img class="img-thumbnail d-block float-md-end mx-auto text-center w-50 h-50" src="./img/photo_of_me_square.jpg" alt="">
                 <h2>
                     About Me:
                 </h2>
                 <p>
                     I'm a Brooklyn-based full-stack developer with a focus toward back-end data structures. I love teamwork and those holy-s*** moments when a creative solution comes into focus. 
                 </p>
-                <img src="" alt="">
             </article>
         </div>
 
         <!-- form -->
         <div class="d-flex align-items-center h-100">
-            <form class="m-auto w-75">
-                <label for="email">
-                    Email: 
-                    <input type="email" name="email" id="">
+            <form action="https://formspree.io/f/xdoylebg" onsubmit="this.submit();this.reset()" target="_blank" method="POST">
+                <label>
+                    Your email:
+                    <input type="email" name="_replyto">
                 </label>
-                <label for="">
-                    <input type="text" name="" id="">
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
                 </label>
-                <input type="submit" value="">
+                <input type="submit" value="Send">
             </form>
         </div>
 
