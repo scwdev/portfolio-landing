@@ -13,12 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 
     <link rel="stylesheet" href="./css/styles.css">
-    <script defer src="./js/app.js"></script>
+    <script defer src="./scripts/app.js"></script>
     
 </head>
-<body class="container w-75">
+<body>
     <!-- navbar -->
-    <nav class="container navbar navbar-expand-lg fixed-top navbar-dark bg-dark w-75">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">BLANKSPACE</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,68 +27,76 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Projects</a>
+                <a class="nav-link active" aria-current="page" href="#project-carousel">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">About Me</a>
+                <a class="nav-link" aria-current="page" href="#about-me">About Me</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Contact</a>
+                <a class="nav-link" aria-current="page" href="#contact">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">GitHub</a>
+                <a class="nav-link" aria-current="page" href="https://github.com/scwdev" target="_blank">GitHub</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">LinkedIn</a>
+                <a class="nav-link" aria-current="page" href="https://www.linkedin.com/in/noam-blanks/" target="_blank">LinkedIn</a>
               </li>
             
           </div>
         </div>
     </nav>
-    <!-- project slides -->
-    <div id="carousel-outer" class="carousel slide vh-100" data-bs-ride="carousel">
-        <div id="carousel-inner" class="carousel-inner h-100 d-flex align-items-center">
-
-            <!-- <div class="carousel-item active">
-                <div class="card m-auto" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <main class="vh-100">
+        <!-- project slides -->
+        <!-- <div id="project-carousel" class="carousel carousel-dark slide h-100" data-bs-ride="carousel">
+            <div id="carousel-indicators" class="carousel-indicators">
+                <button type="button" data-bs-target="#project-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div id="carousel-inner" class="carousel-inner h-100 d-flex align-items-center">
+    
+                <div class="carousel-item active">
+                    <div class="text-center m-auto">
+                        <h2>This space intentionally Blanks</h2>
                     </div>
-                </div>
-            </div> -->
-
+                </div> 
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#project-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#project-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div> -->
+    
+            <!-- about -->
+        <!-- <div id="about-me" class="d-flex align-items-center h-100">
+            <article class="mx-auto w-75">
+                <img class="img-thumbnail d-block float-md-end mx-auto text-center w-50 h-50" src="./img/photo_of_me_square.jpg" alt="">
+                <h2>
+                    About Me:
+                </h2>
+                <p>
+                    I'm a Brooklyn-based full-stack developer with a focus toward back-end data structures. I love teamwork and those holy-s*** moments when a creative solution comes into focus. 
+                </p>
+            </article>
+        </div> -->
+    
+            <!-- form -->
+        <div id="contact" class="d-flex align-items-center h-100">
+            <form class="mx-auto flex-column" action="https://formspree.io/f/xdoylebg" onsubmit="this.submit();this.reset()" target="_blank" method="POST">
+                <label>
+                    Your email:
+                    <input type="email" name="_replyto">
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                </label>
+                <input type="submit" value="Send">
+            </form>
         </div>
-    </div>
-
-        <!-- about -->
-    <div class="d-flex align-items-center h-100">
-        <article class="mx-auto w-75">
-            <img class="img-thumbnail d-block float-md-end mx-auto text-center w-50 h-50" src="./img/photo_of_me_square.jpg" alt="">
-            <h2>
-                About Me:
-            </h2>
-            <p>
-                I'm a Brooklyn-based full-stack developer with a focus toward back-end data structures. I love teamwork and those holy-s*** moments when a creative solution comes into focus. 
-            </p>
-        </article>
-    </div>
-
-        <!-- form -->
-    <div class="d-flex align-items-center h-100">
-        <form action="https://formspree.io/f/xdoylebg" onsubmit="this.submit();this.reset()" target="_blank" method="POST">
-            <label>
-                Your email:
-                <input type="email" name="_replyto">
-            </label>
-            <label>
-                Your message:
-                <textarea name="message"></textarea>
-            </label>
-            <input type="submit" value="Send">
-        </form>
-    </div>
+    </main>
 
 </body>
 </html>
