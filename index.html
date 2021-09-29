@@ -4,35 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLANKSPACE</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="js/definitions.js" defer></script>
-    <script src="js/card_ajax.js" defer></script>
-    <script src="js/app.js" defer></script>
-    <script src="https://kit.fontawesome.com/3c71cbc02f.js" crossorigin="anonymous" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/media_queries.css">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- Conentful API -->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./scripts/app.js"></script>
+    
 </head>
 <body>
-    <main>
-        <h1 class="tiles" id="logo">blank<span id="logo-s">s</span>pace</h1>
-        <button class='tiles fas fa-th-large' id="nav-button"></button>
-        <button class='tiles nav-elements' id="about-me-button">About Me</button>
-        <button class='tiles nav-elements' id="contact-form-button">Contact Form</button>
-        <div class='tiles nav-elements' id="social-buttons-container">
-            <a class='social-buttons fab fa-github' id="github-icon" href="https://github.com/scwdev/" target="_blank" rel="noopener noreferrer"></a>
-            <a class='social-buttons fab fa-linkedin' id="linkedin-icon" href="https://www.linkedin.com/in/noam-blanks/" target="_blank" rel="noopener noreferrer"></a>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">BLANKSPACE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <a class="nav-link active" aria-current="page" href="#project-carousel">Projects</a>
+                <a class="nav-link" href="#about-me">About Me</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="https://github.com/scwdev" target="_blank">GitHub</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/noam-blanks/" target="_blank">LinkedIn</a>
+            
+          </div>
         </div>
-        <button class="tiles project-buttons" id="proj-1"></button>
-        <button class="tiles project-buttons" id="proj-2"></button>
-        <button class="tiles project-buttons" id="proj-3"></button>
-        <button class="tiles project-buttons" id="proj-4"></button>
-        <button class="tiles project-buttons" id="proj-5"></button>
-        <button class="tiles project-buttons" id="proj-6"></button>
-        <button class="tiles project-buttons" id="proj-7"></button>
+    </nav>
+
+    <main class="vh-100">
+        
+        <!-- project slides -->
+        <div id="project-carousel" class="carousel carousel-dark slide h-100" data-bs-ride="carousel">
+            <div id="carousel-indicators" class="carousel-indicators">
+                <button type="button" data-bs-target="#project-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div id="carousel-inner" class="carousel-inner h-100 d-flex align-items-center">
+    
+                <div class="carousel-item active">
+                    <div class="text-center m-auto">
+                        <h2>This space intentionally Blanks</h2>
+                    </div>
+                </div> 
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#project-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#project-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    
+        <!-- about -->
+        <div id="about-me" class="container d-flex align-items-center h-100">
+            <article class="mx-auto h-50">
+                <img class="img-thumbnail float-sm-end h-50 d-block mx-auto" src="./img/photo_of_me_square.jpg" alt="">
+                <h3>
+                    About Me:
+                </h3>
+                <p>
+                    Full-stack software developer and erstwhile carpenter, looking to work with teams to create grander things than we could accomplish individually. Always pursuing the creative solution or out-of-the-box idea. If you don’t have a regular D&D game going, I will take care of that, too.
+                </p>
+                <footer class="pt-5">
+                    <ul class="d-flex flex-wrap justify-content-center m-0 py-0 px-1 bg-white">
+                        <li class="tech-list">Python</li>
+                        <li class="tech-list">Flask</li>
+                        <li class="tech-list">SQL</li>
+                        <li class="tech-list">Postgres</li>
+                        <li class="tech-list">SQLite</li>
+                        <li class="tech-list">Django</li>
+                        <li class="tech-list">Mongo</li>
+                        <li class="tech-list">Express</li>
+                        <li class="tech-list">React</li>
+                        <li class="tech-list">NodeJS</li>
+                        <li class="tech-list">Git</li>
+                        <li class="tech-list">Zsh</li>
+                        <li class="tech-list">HTML</li>
+                        <li class="tech-list">JavaScript</li>
+                        <li class="tech-list">jQuery</li>
+                        <li class="tech-list">CSS</li>
+                        <li class="tech-list">Sass</li>
+                        <li class="tech-list">Bootstrap</li>
+                    </ul>
+                </footer>
+            </article>
+        </div>
+    
+        <!-- form -->
+        <div id="contact" class="d-flex align-items-center h-100">
+            <form class="container mx-auto d-flex flex-column h-50" action="https://formspree.io/f/xdoylebg" onsubmit="this.submit();this.reset()" target="_blank" method="POST">
+                <div class="mb-3" >
+                    <label class="form-label" for="_replyto">Your email:</label>
+                    <input class="form-control" type="email" name="_replyto" placeholder="placeholder@you.com">
+                </div>
+                <div class="mb-3 flex-grow-1" >
+                    <label class="form-label" for="message">Your message:</label>
+                    <textarea class="form-control h-75" name="message"></textarea>
+                </div>
+                <input class="btn btn-primary m-1 w-25 align-self-end" type="submit" value="Send">
+            </form>
+        </div>
+
     </main>
     
 </body>
