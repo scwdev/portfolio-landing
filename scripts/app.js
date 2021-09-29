@@ -23,8 +23,8 @@ client.getEntries({content_type:'projectCard'})
             <div class="card-body">
               <h5 class="card-title">${title}</h5>
               <p class="card-text">${description}</p>
-              <a href="${deployment}" target="_blank" class="btn btn-primary">Deployment</a>
-              <a href="${repo}" target="_blank" class="btn btn-primary">Git Repository</a>
+              <a href="${deployment}" target="_blank" class="btn btn-primary m-1">Deployment</a>
+              <a href="${repo}" target="_blank" class="btn btn-primary m-1">Git Repository</a>
             </div>
             <img src="${img.fields.file.url}" class="w-50 rounded" alt="..." />
           </div>

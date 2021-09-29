@@ -17,6 +17,7 @@
     
 </head>
 <body>
+
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container-fluid">
@@ -26,28 +27,21 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+
                 <a class="nav-link active" aria-current="page" href="#project-carousel">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#about-me">About Me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#contact">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="https://github.com/scwdev" target="_blank">GitHub</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="https://www.linkedin.com/in/noam-blanks/" target="_blank">LinkedIn</a>
-              </li>
+                <a class="nav-link" href="#about-me">About Me</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="https://github.com/scwdev" target="_blank">GitHub</a>
+                <a class="nav-link" href="https://www.linkedin.com/in/noam-blanks/" target="_blank">LinkedIn</a>
             
           </div>
         </div>
     </nav>
+
     <main class="vh-100">
+        
         <!-- project slides -->
-        <!-- <div id="project-carousel" class="carousel carousel-dark slide h-100" data-bs-ride="carousel">
+        <div id="project-carousel" class="carousel carousel-dark slide h-100" data-bs-ride="carousel">
             <div id="carousel-indicators" class="carousel-indicators">
                 <button type="button" data-bs-target="#project-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             </div>
@@ -67,36 +61,59 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div> -->
+        </div>
     
-            <!-- about -->
-        <!-- <div id="about-me" class="d-flex align-items-center h-100">
-            <article class="mx-auto w-75">
-                <img class="img-thumbnail d-block float-md-end mx-auto text-center w-50 h-50" src="./img/photo_of_me_square.jpg" alt="">
-                <h2>
+        <!-- about -->
+        <div id="about-me" class="container d-flex align-items-center h-100">
+            <article class="mx-auto h-50">
+                <img class="img-thumbnail float-sm-end h-50 d-block mx-auto" src="./img/photo_of_me_square.jpg" alt="">
+                <h3>
                     About Me:
-                </h2>
+                </h3>
                 <p>
-                    I'm a Brooklyn-based full-stack developer with a focus toward back-end data structures. I love teamwork and those holy-s*** moments when a creative solution comes into focus. 
+                    Full-stack software developer and erstwhile carpenter, looking to work with teams to create grander things than we could accomplish individually. Always pursuing the creative solution or out-of-the-box idea. If you don’t have a regular D&D game going, I will take care of that, too.
                 </p>
+                <footer class="pt-5">
+                    <ul class="d-flex flex-wrap justify-content-center m-0 py-0 px-1 bg-white">
+                        <li class="tech-list">Python</li>
+                        <li class="tech-list">Flask</li>
+                        <li class="tech-list">SQL</li>
+                        <li class="tech-list">Postgres</li>
+                        <li class="tech-list">SQLite</li>
+                        <li class="tech-list">Django</li>
+                        <li class="tech-list">Mongo</li>
+                        <li class="tech-list">Express</li>
+                        <li class="tech-list">React</li>
+                        <li class="tech-list">NodeJS</li>
+                        <li class="tech-list">Git</li>
+                        <li class="tech-list">Zsh</li>
+                        <li class="tech-list">HTML</li>
+                        <li class="tech-list">JavaScript</li>
+                        <li class="tech-list">jQuery</li>
+                        <li class="tech-list">CSS</li>
+                        <li class="tech-list">Sass</li>
+                        <li class="tech-list">Bootstrap</li>
+                    </ul>
+                </footer>
             </article>
-        </div> -->
+        </div>
     
-            <!-- form -->
+        <!-- form -->
         <div id="contact" class="d-flex align-items-center h-100">
-            <form class="mx-auto flex-column" action="https://formspree.io/f/xdoylebg" onsubmit="this.submit();this.reset()" target="_blank" method="POST">
-                <label>
-                    Your email:
-                    <input type="email" name="_replyto">
-                </label>
-                <label>
-                    Your message:
-                    <textarea name="message"></textarea>
-                </label>
-                <input type="submit" value="Send">
+            <form class="container mx-auto d-flex flex-column h-50" action="https://formspree.io/f/xdoylebg" onsubmit="this.submit();this.reset()" target="_blank" method="POST">
+                <div class="mb-3" >
+                    <label class="form-label" for="_replyto">Your email:</label>
+                    <input class="form-control" type="email" name="_replyto" placeholder="placeholder@you.com">
+                </div>
+                <div class="mb-3 flex-grow-1" >
+                    <label class="form-label" for="message">Your message:</label>
+                    <textarea class="form-control h-75" name="message"></textarea>
+                </div>
+                <input class="btn btn-primary m-1 w-25 align-self-end" type="submit" value="Send">
             </form>
         </div>
-    </main>
 
+    </main>
+    
 </body>
 </html>
